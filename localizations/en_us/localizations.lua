@@ -4,17 +4,11 @@ localizations.values = {
 
     research_unlock_cookGruel = "Cook Gruel",
 
-    object_unfiredBowlGruel = "Gruel",
-    object_unfiredBowlGruel_plural = "Gruel",
+    object_gruel = "Gruel",
+    object_gruel_plural = "Gruel",
 
-    object_unfiredBowlGruel = "Gruel",
-    object_firedBowlGruel_plural = "Gruel",
-
-    resource_unfiredBowlGruel = "Gruel",
-    resource_unfiredBowlGruel_plural = "Gruel",
-
-    resource_firedBowlGruel = "Gruel",
-    resource_firedBowlGruel_plural = "Gruel",
+    resource_gruel = "Gruel",
+    resource_gruel_plural = "Gruel",
 
     storage_gruel = "Gruel",
 

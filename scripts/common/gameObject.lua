@@ -15,7 +15,10 @@ function mod:onload(gameObject)
 
 
     firedBowlGruel = {
-      modelName = "firedBowlBurnMedicine",
+
+      name = locale:get("object_gruel"),
+      plural = locale:get("object_gruel_plural"),
+      modelName = "gruelBowlFired",
       scale = 1.0,
       hasPhysics = true,
 
@@ -32,7 +35,9 @@ function mod:onload(gameObject)
     },
 
     unfiredBowlGruel = {
-      modelName = "unfiredBowlBurnMedicine",
+      name = locale:get("object_gruel"),
+      plural = locale:get("object_gruel_plural"),
+      modelName = "gruelBowlUnFired",
       scale = 1.0,
       hasPhysics = true,
 
