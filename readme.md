@@ -1,7 +1,19 @@
+##Foodies - Sapiens Mod
 
-- Make gruel/porridge from wheat. Lasts 2 days.
+Adds more food options to Sapiens.
 
+###In Progress
 
-Planned
-- Make soup from cabbage and beetroot. Lasts 2 days.
-- Chickens lay eggs. Make omelette from eggs
+- Gruel: 1 x hulled wheat and 1 x bowl. `foodValue` = `1.0`
+
+###Planned
+
+- Beetroot soup: 2 x raw beetroots and 1 x bowl. `foodValue` = `1.0`
+- Oat: alternative to wheat. Will eventually replace wheat for Gruel
+- Mushrooms
+
+###Potential
+
+- Chickens lay eggs, and can cook them into omelettes?
+- Mushrooms?
+- Firewood from logs. Lasts longer than branches/logs
