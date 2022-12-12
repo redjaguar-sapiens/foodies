@@ -25,6 +25,8 @@ function mod:onload(storage)
             resource.types.firedBowlGruel.index,
             resource.types.unfiredBowlBeetrootSoup.index,
             resource.types.firedBowlBeetrootSoup.index,
+            resource.types.unfiredBowlPumpkinSoup.index,
+            resource.types.firedBowlPumpkinSoup.index,
         },
         storageBox = {
             size =  vec3(0.24, 0.1, 0.24),

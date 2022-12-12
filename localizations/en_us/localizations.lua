@@ -34,6 +34,21 @@ localizations.values = {
     craftable_beetrootSoup = "Beetroot Soup",
     craftable_beetrootSoup_plural = "Beetroot Soup",
     craftable_beetrootSoup_summary = "Beetroots in water. Yum!",
+
+    -- Pumpkin Soup
+    research_unlock_cookPumpkinSoup = "Cook Pumpkin Soup",
+
+    object_pumpkinSoup = "Pumpkin Soup",
+    object_pumpkinSoup_plural = "Pumpkin Soups",
+
+    resource_pumpkinSoup = "Pumpkin Soup",
+    resource_pumpkinSoup_plural = "Pumpkin Soups",
+
+    storage_pumpkinSoup = "Pumpkin Soup",
+
+    craftable_pumpkinSoup = "Pumpkin Soup",
+    craftable_pumpkinSoup_plural = "Pumpkin Soup",
+    craftable_beetrootSoup_summary = "Pumpkins blended into a heart-warming soup",
 }
 
 return localizations

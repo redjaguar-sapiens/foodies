@@ -149,6 +149,71 @@ function mod:onload(craftable)
             temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
             temporaryToolRotation = craftable.cookingStickRotation,
         })
+
+        -- Pumpkin Soup
+
+        craftable:addCraftable("pumpkinSoup", {
+            name = locale:get("craftable_pumpkinSoup"),
+            plural = locale:get("craftable_pumpkinSoup_plural"),
+            summary = locale:get("craftable_pumpkinSoup_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.firedBowlPumpkinSoup,
+            classification = constructable.classifications.craft.index,
+            isFoodPreperation = true,
+            disabledUntilCraftableResearched = true,
+
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                  [gameObject.types.unfiredBowlDry.index] = {
+                      gameObject.typeIndexMap.unfiredBowlPumpkinSoup,
+                  },
+                  [gameObject.types.firedBowl.index] = {
+                      gameObject.typeIndexMap.firedBowlPumpkinSoup,
+                  },
+                }
+            },
+            buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
+            inProgressBuildModel = "craftSimple",
+
+            disabledUntilAdditionalSkillTypeDiscovered = skill.types.pottery.index,
+
+            skills = {
+                required = skill.types.campfireCooking.index,
+            },
+
+
+            requiredResources = {
+                {
+                    group = resource.groups.bowl.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+                {
+                    type = resource.types.pumpkin.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+            },
+
+            requiredCraftAreaGroups = {
+                craftAreaGroup.types.campfire.index,
+            },
+
+            attachResourceToHandIndex = 1,
+            attachResourceOffset = vec3xMat3(vec3(-0.7,0.1,0.02), craftable.cookingStickRotationOffset),
+            attachResourceRotation = mat3Rotate(mat3Identity, math.pi * 0.5, vec3(0.0,0.0,1.0)),
+
+            temporaryToolObjectType = gameObject.typeIndexMap.stick,
+            temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
+            temporaryToolRotation = craftable.cookingStickRotation,
+        })
     end
 end
 

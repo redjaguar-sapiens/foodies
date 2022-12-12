@@ -1,7 +1,7 @@
 local modInfo = {
   name = "Foodies",
-  description = "Adds more food recipes from existing resources",
-  version = "0.1.0",
+  description = "Adds a wider range of food and recipes",
+  version = "0.3.0",
   type = "world",
   developer = "RedJaguar",
   loadOrder = 1,

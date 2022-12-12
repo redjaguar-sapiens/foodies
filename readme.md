@@ -14,6 +14,11 @@ Adds more food options to Sapiens.
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
+- Pumpkin Soup: 1 x pumpkin and 1 x bowl
+  - `foodValue` = `0.8` (same as cooked pumpkin)
+  - `Research` = `Basic cooking` + `Pottery` (for bowls)
+  - `Skills` = `Basic Cooking`
+  - `Storage Group` = `Food Bowls`
 
 ### Up Next
 
@@ -22,11 +27,6 @@ Adds more food options to Sapiens.
   - `Research` = `Pottery` + `Ceramics` (for firing)
   - `Skills` = `Pottery`
   - `Storage Group` = `Pots`
-- Pumpkin Soup: 1 x pumpkin and 1 x bowl
-  - `foodValue` = `0.8` (same as cooked pumpkin)
-  - `Research` = `Basic cooking` + `Pottery` (for bowls)
-  - `Skills` = `Basic Cooking`
-  - `Storage Group` = `Food Bowls`
 - Meat Stew: 1 x meat and 1 x bowl
   - Need to decide how to handle multiple portions of meat, and how many stews are produced
   - I.e. Cooked Chicken currently equals 1 portion; Alpaca = 3; Mammoth = 4

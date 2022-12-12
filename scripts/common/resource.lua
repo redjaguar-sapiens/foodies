@@ -44,6 +44,24 @@ function mod:onload(resource)
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlBeetrootSoup,
     })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "unfiredBowlPumpkinSoup",
+        name = locale:get("resource_pumpkinSoup"),
+        plural = locale:get("resource_pumpkinSoup_plural"),
+        foodValue = 0.8,
+        foodPortionCount = 1,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlPumpkinSoup,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "firedBowlPumpkinSoup",
+        name = locale:get("resource_pumpkinSoup"),
+        plural = locale:get("resource_pumpkinSoup_plural"),
+        foodValue = 0.8,
+        foodPortionCount = 1,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlPumpkinSoup,
+    })
 end
 
 return mod

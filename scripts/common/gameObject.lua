@@ -93,6 +93,46 @@ function mod:onload(gameObject)
       },
     },
 
+    -- Pumpkin Soup
+    firedBowlPumpkinSoup = {
+
+      name = locale:get("object_pumpkinSoup"),
+      plural = locale:get("object_pumpkinSoup_plural"),
+      modelName = "pumpkinSoupBowlFired",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.firedBowlPumpkinSoup.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
+        }
+      },
+      eatByProducts = {
+        gameObject.typeIndexMap.firedBowl,
+      },
+    },
+
+    unfiredBowlPumpkinSoup = {
+      name = locale:get("object_pumpkinSoup"),
+      plural = locale:get("object_pumpkinSoup_plural"),
+      modelName = "pumpkinSoupBowlUnFired",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.unfiredBowlPumpkinSoup.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
+        }
+      },
+      eatByProducts = {
+        gameObject.typeIndexMap.unfiredBowlDry,
+      },
+    },
+
     })
 end
 
