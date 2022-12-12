@@ -5,13 +5,13 @@ Adds more food options to Sapiens.
 ### Completed
 
 - Gruel: 1 x hulled wheat and 1 x bowl. 
-  - `foodValue` = `1.0`
+  - `foodValue` = `0.7`
   - `Expiry` = (Currently none, will be 2 days)
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
 - Beetroot soup: 2 x raw beetroots and 1 x bowl. 
-  - `foodValue` = `1.0`
+  - `foodValue` = `0.7`
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
