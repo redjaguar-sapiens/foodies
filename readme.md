@@ -6,7 +6,6 @@ Adds more food options to Sapiens.
 
 - Gruel: 1 x hulled wheat and 1 x bowl. 
   - `foodValue` = `0.7`
-  - `Expiry` = (Currently none, will be 2 days)
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
@@ -18,6 +17,7 @@ Adds more food options to Sapiens.
 
 ### Up Next
 
+- Food Bowl expiry
 - Clay pot: for cooking food bowls (gruel/soup)
   - `Research` = `Pottery` + `Ceramics` (for firing)
   - `Skills` = `Pottery`
@@ -31,6 +31,7 @@ Adds more food options to Sapiens.
   - Need to decide how to handle multiple portions of meat, and how many stews are produced
   - I.e. Cooked Chicken currently equals 1 portion; Alpaca = 3; Mammoth = 4
   - May also require a vegetable
+- Cabbage: native crop used for stews
 - Oats: native crop that would eventually replace wheat for Gruel recipe, or at least be an alernative ingredient
 - Food bowls give a small warmth boost when eaten
 
