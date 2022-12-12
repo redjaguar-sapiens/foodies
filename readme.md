@@ -9,17 +9,20 @@ Adds more food options to Sapiens.
   - `Expiry` = (Currently none, will be 2 days)
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
-
-### Up Next
-
+  - `Storage Group` = `Food Bowls`
 - Beetroot soup: 2 x raw beetroots and 1 x bowl. 
   - `foodValue` = `1.0`
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
-- Clay pot: for cooking gruel/soup
+  - `Storage Group` = `Food Bowls`
+
+### Up Next
+
+- Clay pot: for cooking food bowls (gruel/soup)
   - `Research` = `Pottery` + `Ceramics` (for firing)
   - `Skills` = `Pottery`
 - Oats: native crop that would eventually replace wheat for Gruel recipe
+- Food bowls give a small warmth boost when eaten
 
 ### Potential
 

@@ -26,6 +26,24 @@ function mod:onload(resource)
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlGruel,
     })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "unfiredBowlBeetrootSoup",
+        name = locale:get("resource_beetrootSoup"),
+        plural = locale:get("resource_beetrootSoup_plural"),
+        foodValue = 1,
+        foodPortionCount = 1,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlBeetrootSoup,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "firedBowlBeetrootSoup",
+        name = locale:get("resource_beetrootSoup"),
+        plural = locale:get("resource_beetrootSoup_plural"),
+        foodValue = 1,
+        foodPortionCount = 1,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlBeetrootSoup,
+    })
 end
 
 return mod

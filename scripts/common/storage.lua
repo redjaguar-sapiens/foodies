@@ -17,12 +17,14 @@ function mod:onload(storage)
     local gameObjectTypeIndexMap = typeMaps.types.gameObject
 
     typeMaps:insert("storage", storage.types, {
-        key = "gruel",
-        name = locale:get("storage_gruel"),
+        key = "foodBowls",
+        name = locale:get("storage_foodBowls"),
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlGruel,
         resources = {
             resource.types.unfiredBowlGruel.index,
             resource.types.firedBowlGruel.index,
+            resource.types.unfiredBowlBeetrootSoup.index,
+            resource.types.firedBowlBeetrootSoup.index,
         },
         storageBox = {
             size =  vec3(0.24, 0.1, 0.24),

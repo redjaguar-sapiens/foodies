@@ -13,7 +13,7 @@ function mod:onload(gameObject)
 
 	gameObject:addGameObjectsFromTable({
 
-
+    -- Gruel
     firedBowlGruel = {
 
       name = locale:get("object_gruel"),
@@ -42,6 +42,46 @@ function mod:onload(gameObject)
       hasPhysics = true,
 
       resourceTypeIndex = resource.types.unfiredBowlGruel.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
+        }
+      },
+      eatByProducts = {
+        gameObject.typeIndexMap.unfiredBowlDry,
+      },
+    },
+
+    -- Beetroot Soup
+    firedBowlBeetrootSoup = {
+
+      name = locale:get("object_beetrootSoup"),
+      plural = locale:get("object_beetrootSoup_plural"),
+      modelName = "beetrootSoupBowlFired",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.firedBowlBeetrootSoup.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
+        }
+      },
+      eatByProducts = {
+        gameObject.typeIndexMap.firedBowl,
+      },
+    },
+
+    unfiredBowlBeetrootSoup = {
+      name = locale:get("object_beetrootSoup"),
+      plural = locale:get("object_beetrootSoup_plural"),
+      modelName = "beetrootSoupBowlUnFired",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.unfiredBowlBeetrootSoup.index,
 
       markerPositions = {
         {

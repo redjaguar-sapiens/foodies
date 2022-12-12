@@ -12,11 +12,16 @@ function mod:onload(research)
     research.load = function(research_, gameObject, constructable, flora)
         prevLoad(research_, gameObject, constructable, flora)
 
+        -- Gruel
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredUrnHulledWheat.index] = constructable.types.gruel.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.unfiredUrnHulledWheat.index)
 
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedUrnHulledWheat.index] = constructable.types.gruel.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedUrnHulledWheat.index)
+
+        -- Beetroot Soup
+        research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.beetroot.index] = constructable.types.beetrootSoup.index
+        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.beetroot.index)
 
         research:updateDerivedInfo(research.types.campfireCooking)
     end
