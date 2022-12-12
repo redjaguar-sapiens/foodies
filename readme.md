@@ -4,17 +4,17 @@ Adds more food options to Sapiens.
 
 ### Completed
 
-- Gruel: 1 x hulled wheat and 1 x bowl. 
+- **Gruel**: 1 x hulled wheat and 1 x bowl. 
   - `foodValue` = `0.7`
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- Beetroot Soup: 2 x raw beetroots and 1 x bowl. 
+- **Beetroot Soup**: 2 x raw beetroots and 1 x bowl. 
   - `foodValue` = `0.7`
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- Pumpkin Soup: 1 x pumpkin and 1 x bowl
+- **Pumpkin Soup**: 1 x pumpkin and 1 x bowl
   - `foodValue` = `0.8` (same as cooked pumpkin)
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
