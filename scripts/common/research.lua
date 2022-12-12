@@ -10,9 +10,9 @@ local mod = {
 }
 
 function mod:onload(research)
-    local prevLoad = research.load
+    local super_load = research.load
     research.load = function(research_, gameObject, constructable, flora)
-        prevLoad(research_, gameObject, constructable, flora)
+        super_load(research_, gameObject, constructable, flora)
 
         -- Gruel
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredUrnHulledWheat.index] = constructable.types.gruel.index
