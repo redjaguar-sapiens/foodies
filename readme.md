@@ -1,6 +1,6 @@
 ## Foodies - Sapiens Mod
 
-Adds more food options to Sapiens.
+Adds more food options and culinary decorations to Sapiens.
 
 ### Completed
 
@@ -20,7 +20,7 @@ Adds more food options to Sapiens.
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
 - **Cooking Pot**: for cooking food bowls (gruel/soup)
-  - Currently for decorative purposes, but will eventually be used for cooking
+  - Currently for decorative purposes, but will eventually be used for cooking Food Bowls
   - `Research` = `Pottery` + `Ceramics` (for firing)
   - `Skills` = `Pottery`
   - `Storage Group` = `Cooking Pots`
@@ -47,4 +47,4 @@ Adds more food options to Sapiens.
 
 Got questions about the mod? Join the Sapiens Modding community over on [Discord](https://discord.gg/WnN8hj2Fyg), and ping `@Tristan-RedJaguar`.
 
-Thanks to FishiDishi for helping with the food bowl base model and debugging!
+Thanks to FishiDishi for helping with the Blender models and debugging!
