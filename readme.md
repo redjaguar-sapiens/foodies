@@ -41,3 +41,7 @@ Adds more food options to Sapiens.
 - Mushrooms?
 - Firewood from logs. Lasts longer than branches/logs
 - Rebalance expiry times for existing foods, e.g. flatbreads currently last 1 year
+
+### Mod Support
+
+Got questions about the mod? Join the Sapiens Modding community over on [Discord](https://discord.gg/WnN8hj2Fyg), and ping `@Tristan-RedJaguar`.

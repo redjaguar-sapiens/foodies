@@ -1,3 +1,5 @@
+--- Foodies: research.lua
+--- @author RedJaguar
 
 local order = mjrequire "common/order"
 local locale = mjrequire "common/locale"

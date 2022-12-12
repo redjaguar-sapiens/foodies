@@ -1,3 +1,5 @@
+--- Foodies: inspectCraftPanel.lua
+--- @author RedJaguar
 
 local gameObject = mjrequire "common/gameObject"
 local constructable = mjrequire "common/constructable"

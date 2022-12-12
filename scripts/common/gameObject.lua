@@ -1,3 +1,6 @@
+--- Foodies: gameObject.lua
+--- @author RedJaguar
+
 local mjm = mjrequire "common/mjm"
 local vec3 = mjm.vec3
 

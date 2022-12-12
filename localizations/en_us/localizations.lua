@@ -1,3 +1,6 @@
+--- Foodies: localizations.lua
+--- @author RedJaguar
+
 local localizations = {}
 
 localizations.values = {

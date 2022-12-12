@@ -1,4 +1,5 @@
---thanks SirLich for this!
+--- Foodies: material.lua
+--- @author RedJaguar
 
 local mod = {
 	loadOrder = 1

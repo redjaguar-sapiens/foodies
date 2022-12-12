@@ -1,3 +1,6 @@
+--- Foodies: craftable.lua
+--- @author RedJaguar
+
 local mjm = mjrequire "common/mjm"
 local vec3 = mjm.vec3
 local vec3xMat3 = mjm.vec3xMat3

@@ -1,3 +1,6 @@
+--- Foodies: resource.lua
+--- @author RedJaguar
+
 local typeMaps = mjrequire "common/typeMaps"
 local locale = mjrequire "common/locale"
 

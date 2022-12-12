@@ -1,3 +1,6 @@
+--- Foodies: storage.lua
+--- @author RedJaguar
+
 local mjm = mjrequire "common/mjm"
 local vec3 = mjm.vec3
 local mat3Identity = mjm.mat3Identity
