@@ -10,7 +10,7 @@ Adds more food options to Sapiens.
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- Beetroot soup: 2 x raw beetroots and 1 x bowl. 
+- Beetroot Soup: 2 x raw beetroots and 1 x bowl. 
   - `foodValue` = `0.7`
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
@@ -21,7 +21,17 @@ Adds more food options to Sapiens.
 - Clay pot: for cooking food bowls (gruel/soup)
   - `Research` = `Pottery` + `Ceramics` (for firing)
   - `Skills` = `Pottery`
-- Oats: native crop that would eventually replace wheat for Gruel recipe
+  - `Storage Group` = `Pots`
+- Pumpkin Soup: 1 x pumpkin and 1 x bowl
+  - `foodValue` = `0.8` (same as cooked pumpkin)
+  - `Research` = `Basic cooking` + `Pottery` (for bowls)
+  - `Skills` = `Basic Cooking`
+  - `Storage Group` = `Food Bowls`
+- Meat Stew: 1 x meat and 1 x bowl
+  - Need to decide how to handle multiple portions of meat, and how many stews are produced
+  - I.e. Cooked Chicken currently equals 1 portion; Alpaca = 3; Mammoth = 4
+  - May also require a vegetable
+- Oats: native crop that would eventually replace wheat for Gruel recipe, or at least be an alernative ingredient
 - Food bowls give a small warmth boost when eaten
 
 ### Potential
