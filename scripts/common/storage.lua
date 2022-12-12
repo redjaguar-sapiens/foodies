@@ -60,14 +60,14 @@ function mod:onload(storage)
             
         },
         storageBox = {
-            size =  vec3(0.3, 0.3 , 0.3),
+            size =  vec3(0.5, 0.5 , 0.5),
             --offset =  vec3(0.0, 0.0, 0.0),
             rotationFunction = function(uniqueID, seed)
                 local randomValue = rng:valueForUniqueID(uniqueID, seed)
                 local rotation = mat3Rotate(mat3Identity, randomValue * 6.282, vec3(0.0,1.0,0.0))
                 return rotation
             end,
-            placeObjectOffset = mj:mToP(vec3(0.0,0.4,0.0)),
+            placeObjectOffset = mj:mToP(vec3(0.0,0.5,0.0)),
         },
         
         maxCarryCountLimitedAbility = 1,
