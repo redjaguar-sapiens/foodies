@@ -13,7 +13,7 @@ function mod:onload(resource)
         key = "unfiredBowlGruel",
         name = locale:get("resource_gruel"),
         plural = locale:get("resource_gruel_plural"),
-        foodValue = 1,
+        foodValue = 0.7,
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlGruel,
     })
@@ -22,7 +22,7 @@ function mod:onload(resource)
         key = "firedBowlGruel",
         name = locale:get("resource_gruel"),
         plural = locale:get("resource_gruel_plural"),
-        foodValue = 1,
+        foodValue = 0.7,
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlGruel,
     })
@@ -31,7 +31,7 @@ function mod:onload(resource)
         key = "unfiredBowlBeetrootSoup",
         name = locale:get("resource_beetrootSoup"),
         plural = locale:get("resource_beetrootSoup_plural"),
-        foodValue = 1,
+        foodValue = 0.7,
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlBeetrootSoup,
     })
@@ -40,7 +40,7 @@ function mod:onload(resource)
         key = "firedBowlBeetrootSoup",
         name = locale:get("resource_beetrootSoup"),
         plural = locale:get("resource_beetrootSoup_plural"),
-        foodValue = 1,
+        foodValue = 0.7,
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlBeetrootSoup,
     })

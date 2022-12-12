@@ -32,7 +32,7 @@ localizations.values = {
     storage_beetrootSoup = "Beetroot Soup",
 
     craftable_beetrootSoup = "Beetroot Soup",
-    craftable_beetrootSoup_plural = "Beetroot Soups",
+    craftable_beetrootSoup_plural = "Beetroot Soup",
     craftable_beetrootSoup_summary = "Beetroots in water. Yum!",
 }
 
