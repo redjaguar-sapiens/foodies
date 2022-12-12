@@ -19,14 +19,15 @@ Adds more food options to Sapiens.
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
+- **Cooking Pot**: for cooking food bowls (gruel/soup)
+  - Currently for decorative purposes, but will eventually be used for cooking
+  - `Research` = `Pottery` + `Ceramics` (for firing)
+  - `Skills` = `Pottery`
+  - `Storage Group` = `Cooking Pots`
 
 ### Up Next
 
-- Food Bowl expiry
-- Clay pot: for cooking food bowls (gruel/soup)
-  - `Research` = `Pottery` + `Ceramics` (for firing)
-  - `Skills` = `Pottery`
-  - `Storage Group` = `Pots`
+- Food Bowl expiry. Rotten food disappears, but is replaced with an empty bowl. Will also apply to medicines.
 - Meat Stew: 1 x meat and 1 x bowl
   - Need to decide how to handle multiple portions of meat, and how many stews are produced
   - I.e. Cooked Chicken currently equals 1 portion; Alpaca = 3; Mammoth = 4
@@ -45,3 +46,5 @@ Adds more food options to Sapiens.
 ### Mod Support
 
 Got questions about the mod? Join the Sapiens Modding community over on [Discord](https://discord.gg/WnN8hj2Fyg), and ping `@Tristan-RedJaguar`.
+
+Thanks to FishiDishi for helping with the food bowl base model and debugging!

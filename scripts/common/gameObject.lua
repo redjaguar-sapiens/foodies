@@ -136,6 +136,54 @@ function mod:onload(gameObject)
       },
     },
 
+    unfiredCookingPotWet = {
+      name = locale:get("object_unfiredCookingPotWet"),
+      plural = locale:get("object_unfiredCookingPotWet_plural"),
+      modelName = "unfiredCookingPot",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.unfiredCookingPotWet.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.4), 0.0)
+        }
+      }
+    },
+
+    unfiredCookingPotDry = {
+      name = locale:get("object_unfiredCookingPotDry"),
+      plural = locale:get("object_unfiredCookingPotDry_plural"),
+      modelName = "unfiredCookingPot",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.unfiredCookingPotDry.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      }
+    },
+
+    firedCookingPot = {
+      name = locale:get("object_firedCookingPot"),
+      plural = locale:get("object_firedCookingPot_plural"),
+      modelName = "firedCookingPot",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.firedCookingPot.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      }
+    },
+
     })
 end
 

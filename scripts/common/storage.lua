@@ -45,8 +45,37 @@ function mod:onload(storage)
         maxCarryCountLimitedAbility = 1,
         --carryRotation = mat3Rotate(mat3Rotate(mat3Identity, math.pi * 0.4, vec3(0.0, 0.0, 1.0)), math.pi * 0.1, vec3(1.0, 0.0, 0.0)),
         carryRotation = mat3Rotate(mat3Identity, 1.2, vec3(0.0, 0.0, 1.0)),
-		      carryOffset = vec3(0.1,0.1,0.0),
+        carryOffset = vec3(0.1,0.1,0.0),
     })
+          
+    typeMaps:insert("storage", storage.types,   {
+        key = "cookingPots",
+        name = locale:get("storage_cookingPot"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedCookingPot,
+        resources = {
+            resource.types.unfiredCookingPotWet.index,
+            resource.types.unfiredCookingPotDry.index,
+
+            resource.types.firedCookingPot.index,
+            
+        },
+        storageBox = {
+            size =  vec3(0.3, 0.3 , 0.3),
+            --offset =  vec3(0.0, 0.0, 0.0),
+            rotationFunction = function(uniqueID, seed)
+                local randomValue = rng:valueForUniqueID(uniqueID, seed)
+                local rotation = mat3Rotate(mat3Identity, randomValue * 6.282, vec3(0.0,1.0,0.0))
+                return rotation
+            end,
+            placeObjectOffset = mj:mToP(vec3(0.0,0.4,0.0)),
+        },
+        
+        maxCarryCountLimitedAbility = 1,
+        maxCarryCountForRunning = 0,
+        carryOffset = vec3(-0.02,0.1,0.07),
+        carryRotation = mat3Rotate(mat3Identity, 1.2, vec3(0.0, 0.0, 1.0)),
+    })
+
 end
 
 return mod

@@ -65,6 +65,28 @@ function mod:onload(resource)
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlPumpkinSoup,
     })
+
+    --- Cooking Pot
+    typeMaps:insert("resource", resource.types, {
+        key = "unfiredCookingPotWet",
+        name = locale:get("resource_unfiredCookingPotWet"),
+        plural = locale:get("resource_unfiredCookingPotWet_plural"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredCookingPotWet,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "unfiredCookingPotDry",
+        name = locale:get("resource_unfiredCookingPotDry"),
+        plural = locale:get("resource_unfiredCookingPotDry_plural"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredCookingPotDry,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "firedCookingPot",
+        name = locale:get("resource_firedCookingPot"),
+        plural = locale:get("resource_firedCookingPot_plural"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedCookingPot,
+    })
 end
 
 return mod

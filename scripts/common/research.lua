@@ -29,6 +29,10 @@ function mod:onload(research)
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.pumpkin.index] = constructable.types.pumpkinSoup.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.pumpkin.index)
 
+        -- Cooking Pot
+        research.types.potteryFiring.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredCookingPotDry.index] = constructable.types.firedCookingPot.index
+        table.insert(research.types.potteryFiring.resourceTypeIndexes, resource.types.firedCookingPot.index)
+
         research:updateDerivedInfo(research.types.campfireCooking)
     end
 end

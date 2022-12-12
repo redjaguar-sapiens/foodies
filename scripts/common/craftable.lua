@@ -25,6 +25,7 @@ function mod:onload(craftable)
     craftable.load = function(craftable_, gameObject, flora)
         super_load(craftable_, gameObject, flora)
 
+        --- Gruel
         craftable:addCraftable("gruel", {
             name = locale:get("craftable_gruel"),
             plural = locale:get("craftable_gruel_plural"),
@@ -88,7 +89,7 @@ function mod:onload(craftable)
             temporaryToolRotation = craftable.cookingStickRotation,
         })
 
-        -- Beetroot Soup
+        --- Beetroot Soup
 
         craftable:addCraftable("beetrootSoup", {
             name = locale:get("craftable_beetrootSoup"),
@@ -153,7 +154,7 @@ function mod:onload(craftable)
             temporaryToolRotation = craftable.cookingStickRotation,
         })
 
-        -- Pumpkin Soup
+        --- Pumpkin Soup
 
         craftable:addCraftable("pumpkinSoup", {
             name = locale:get("craftable_pumpkinSoup"),
@@ -217,6 +218,75 @@ function mod:onload(craftable)
             temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
             temporaryToolRotation = craftable.cookingStickRotation,
         })
+
+        --- Cooking Pot - Unfired Wet
+
+        craftable:addCraftable("unfiredCookingPotWet", {
+            name = locale:get("craftable_unfiredCookingPotWet"),
+            plural = locale:get("craftable_unfiredCookingPotWet_plural"),
+            summary = locale:get("craftable_unfiredCookingPotWet_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.unfiredCookingPotDry,
+            classification = constructable.classifications.craft.index,
+
+            buildSequence = craftable:createStandardBuildSequence(actionSequence.types.potteryCraft.index, nil),
+            inProgressBuildModel = "craftSimple",
+
+            disabledUntilAdditionalSkillTypeDiscovered = skill.types.pottery.index,
+
+            skills = {
+                required = skill.types.pottery.index,
+            },
+
+            requiredResources = {
+                {
+                    type = resource.types.clay.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+            },
+        })
+
+        --- Cooking Pot - Fired
+
+        craftable:addCraftable("firedCookingPot", {
+            name = locale:get("craftable_firedCookingPot"),
+            plural = locale:get("craftable_firedCookingPot_plural"),
+            summary = locale:get("craftable_firedCookingPot_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.firedCookingPot,
+            classification = constructable.classifications.craft.index,
+
+            buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
+            inProgressBuildModel = "craftSimple",
+
+            skills = {
+                required = skill.types.potteryFiring.index,
+            },
+
+            requiredResources = {
+                {
+                    type = resource.types.unfiredCookingPotDry.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+            },
+
+            requiredCraftAreaGroups = {
+                craftAreaGroup.types.kiln.index,
+            },
+    
+            temporaryToolObjectType = gameObject.typeIndexMap.stick,
+            temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
+            temporaryToolRotation = craftable.cookingStickRotation,
+        })
+
     end
 end
 
