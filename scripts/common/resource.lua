@@ -13,30 +13,12 @@ function mod:onload(resource)
     local gameObjectTypeIndexMap = typeMaps.types.gameObject
 
     typeMaps:insert("resource", resource.types, {
-        key = "unfiredBowlGruel",
-        name = locale:get("resource_gruel"),
-        plural = locale:get("resource_gruel_plural"),
-        foodValue = 0.7,
-        foodPortionCount = 1,
-        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlGruel,
-    })
-
-    typeMaps:insert("resource", resource.types, {
         key = "firedBowlGruel",
         name = locale:get("resource_gruel"),
         plural = locale:get("resource_gruel_plural"),
         foodValue = 0.7,
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlGruel,
-    })
-
-    typeMaps:insert("resource", resource.types, {
-        key = "unfiredBowlBeetrootSoup",
-        name = locale:get("resource_beetrootSoup"),
-        plural = locale:get("resource_beetrootSoup_plural"),
-        foodValue = 0.7,
-        foodPortionCount = 1,
-        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlBeetrootSoup,
     })
 
     typeMaps:insert("resource", resource.types, {
@@ -49,21 +31,20 @@ function mod:onload(resource)
     })
 
     typeMaps:insert("resource", resource.types, {
-        key = "unfiredBowlPumpkinSoup",
-        name = locale:get("resource_pumpkinSoup"),
-        plural = locale:get("resource_pumpkinSoup_plural"),
-        foodValue = 0.8,
-        foodPortionCount = 1,
-        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredBowlPumpkinSoup,
-    })
-
-    typeMaps:insert("resource", resource.types, {
         key = "firedBowlPumpkinSoup",
         name = locale:get("resource_pumpkinSoup"),
         plural = locale:get("resource_pumpkinSoup_plural"),
         foodValue = 0.8,
         foodPortionCount = 1,
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlPumpkinSoup,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "firedBowlFoodBowlRotten",
+        name = locale:get("resource_firedBowlFoodBowlRotten"),
+        plural = locale:get("resource_firedBowlFoodBowlRotten_plural"),
+        disallowsDecorationPlacing = true,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlFoodBowlRotten,
     })
 
     --- Cooking Pot

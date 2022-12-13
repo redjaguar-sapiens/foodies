@@ -35,18 +35,26 @@ function mod:onload(craftable)
             isFoodPreperation = true,
             disabledUntilCraftableResearched = true,
 
-            -- Once fired bowls required, swap out bowl for urn variations
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
-                  [gameObject.types.unfiredBowlDry.index] = {
-                      gameObject.typeIndexMap.unfiredBowlGruel,
-                      gameObject.typeIndexMap.firedUrn,
+                  [gameObject.types.unfiredUrnHulledWheat.index] = {
+                      gameObject.typeIndexMap.firedBowlGruel,
+                      gameObject.typeIndexMap.unfiredUrnDry,
                       gameObject.typeIndexMap.firedCookingPot,
                   },
-                  [gameObject.types.firedBowl.index] = {
+                  [gameObject.types.firedUrnHulledWheat.index] = {
                       gameObject.typeIndexMap.firedBowlGruel,
                       gameObject.typeIndexMap.firedUrn,
                       gameObject.typeIndexMap.firedCookingPot,
+                  },
+                }
+            },
+
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                  [gameObject.types.firedCookingPot.index] = {
+                    gameObject.typeIndexMap.firedBowlBeetrootSoup,
+                    gameObject.typeIndexMap.firedCookingPot,
                   },
                 }
             },
@@ -58,7 +66,6 @@ function mod:onload(craftable)
             skills = {
                 required = skill.types.campfireCooking.index,
             },
-
 
             requiredResources = {
                 {
@@ -72,11 +79,11 @@ function mod:onload(craftable)
                 },
                 -- Switch to fired bowls for all recipes (it's hot, duh)
                 {
-                    group = resource.groups.bowl.index,
+                    type = resource.types.firedBowl.index,
                     count = 1,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
+                        duration = 0.5,
                         durationWithoutSkill = 15.0,
                     }
                 },
@@ -85,7 +92,7 @@ function mod:onload(craftable)
                     count = 1,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
+                        duration = 0.5,
                         durationWithoutSkill = 15.0,
                     }
                 },
@@ -114,13 +121,9 @@ function mod:onload(craftable)
 
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
-                  [gameObject.types.unfiredBowlDry.index] = {
-                      gameObject.typeIndexMap.unfiredBowlBeetrootSoup,
-                      gameObject.typeIndexMap.firedCookingPot,
-                  },
-                  [gameObject.types.firedBowl.index] = {
-                      gameObject.typeIndexMap.firedBowlBeetrootSoup,
-                      gameObject.typeIndexMap.firedCookingPot,
+                  [gameObject.types.firedCookingPot.index] = {
+                    gameObject.typeIndexMap.firedBowlBeetrootSoup,
+                    gameObject.typeIndexMap.firedCookingPot,
                   },
                 }
             },
@@ -132,7 +135,6 @@ function mod:onload(craftable)
             skills = {
                 required = skill.types.campfireCooking.index,
             },
-
 
             requiredResources = {
                 {
@@ -154,7 +156,7 @@ function mod:onload(craftable)
                     }
                 },
                 {
-                    group = resource.groups.bowl.index,
+                    type = resource.types.firedBowl.index,
                     count = 1,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
@@ -190,13 +192,9 @@ function mod:onload(craftable)
 
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
-                  [gameObject.types.unfiredBowlDry.index] = {
-                      gameObject.typeIndexMap.unfiredBowlPumpkinSoup,
-                      gameObject.typeIndexMap.firedCookingPot,
-                  },
-                  [gameObject.types.firedBowl.index] = {
-                      gameObject.typeIndexMap.firedBowlPumpkinSoup,
-                      gameObject.typeIndexMap.firedCookingPot,
+                  [gameObject.types.firedCookingPot.index] = {
+                    gameObject.typeIndexMap.firedBowlPumpkinSoup,
+                    gameObject.typeIndexMap.firedCookingPot,
                   },
                 }
             },
@@ -208,7 +206,6 @@ function mod:onload(craftable)
             skills = {
                 required = skill.types.campfireCooking.index,
             },
-
 
             requiredResources = {
                 {
@@ -230,11 +227,11 @@ function mod:onload(craftable)
                     }
                 },
                 {
-                    group = resource.groups.bowl.index,
+                    type = resource.types.firedBowl.index,
                     count = 1,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
+                        duration = 0.5,
                         durationWithoutSkill = 15.0,
                     }
                 },

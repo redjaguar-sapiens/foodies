@@ -24,12 +24,10 @@ function mod:onload(storage)
         name = locale:get("storage_foodBowls"),
         displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlGruel,
         resources = {
-            resource.types.unfiredBowlGruel.index,
             resource.types.firedBowlGruel.index,
-            resource.types.unfiredBowlBeetrootSoup.index,
             resource.types.firedBowlBeetrootSoup.index,
-            resource.types.unfiredBowlPumpkinSoup.index,
             resource.types.firedBowlPumpkinSoup.index,
+            resource.types.firedBowlFoodBowlRotten.index,
         },
         storageBox = {
             size =  vec3(0.24, 0.1, 0.24),
@@ -60,14 +58,14 @@ function mod:onload(storage)
             
         },
         storageBox = {
-            size =  vec3(0.5, 0.5 , 0.5),
+            size =  vec3(0.5, 0.4 , 0.5),
             --offset =  vec3(0.0, 0.0, 0.0),
             rotationFunction = function(uniqueID, seed)
                 local randomValue = rng:valueForUniqueID(uniqueID, seed)
                 local rotation = mat3Rotate(mat3Identity, randomValue * 6.282, vec3(0.0,1.0,0.0))
                 return rotation
             end,
-            placeObjectOffset = mj:mToP(vec3(0.0,0.5,0.0)),
+            placeObjectOffset = mj:mToP(vec3(0.0,0.2,0.0)),
         },
         
         maxCarryCountLimitedAbility = 1,

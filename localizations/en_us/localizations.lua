@@ -53,6 +53,14 @@ localizations.values = {
     craftable_pumpkinSoup_plural = "Pumpkin Soup",
     craftable_pumpkinSoup_summary = "Pumpkins blended into a heart-warming soup",
 
+    --- Rotten Food Bowls
+    
+    object_firedBowlFoodBowlRotten = "Rotten Food Bowl",
+    object_firedBowlFoodBowlRotten_plural = "Rotten Food Bowls",
+
+    resource_firedBowlFoodBowlRotten = "Rotten Food Bowl",
+    resource_firedBowlFoodBowlRotten_plural = "Rotten Food Bowls",
+
     --- Cooking Pot
 
     research_unlock_makeCookingPot = "Make Cooking Pot",

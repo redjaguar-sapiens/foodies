@@ -2,14 +2,14 @@ Adds more food options and culinary decorations to Sapiens.
 
 Added:
 - Cooking Pot (used for making below recipes)
-- Gruel (1 x hulled wheat + bowl + fired cooking pot)
-- Beetroot Soup (2 x beetroots + bowl + fired cooking pot)
-- Pumpkin Soup (1 x pumpkin + bowl + fired cooking pot)
+- Gruel (1 x hulled wheat + fired bowl + fired cooking pot)
+- Beetroot Soup (2 x beetroots + fired bowl + fired cooking pot)
+- Pumpkin Soup (1 x pumpkin + fired bowl + fired cooking pot)
 
 Notes:
-- All food is made at the campfire. Will require Basic Cooking and Pottery research (plus Threshing for Gruel)
-- Can use either fired or unfired bowls
-- Categorised as Food Bowls for storage and filters.
-- Food Bowls don't currently expire/go rotten, but will do in a future version.
+- All recipes are made at the campfire. Will require Basic Cooking and Pottery research (plus Threshing for gruel)
+- Can only use fired bowls and fired cooking pots
+- Soups/gruels are categorised as Food Bowls for storage and filters.
+- Food Bowls go rotten after 3 days. Similar to Medicine Bowls, which is 2 days
 
 Full details and roadmap on Github: https://github.com/redjaguar-sapiens/foodies

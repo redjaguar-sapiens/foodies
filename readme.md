@@ -9,17 +9,17 @@ Adds more food options and culinary decorations to Sapiens.
   - `Research` = `Pottery` + `Ceramics` (for firing)
   - `Skills` = `Pottery`
   - `Storage Group` = `Cooking Pots`
-- **Gruel**: 1 x hulled wheat,  1 x bowl, 1 x fired cooking pot
+- **Gruel**: 1 x hulled wheat,  1 x fired bowl, 1 x fired cooking pot
   - `foodValue` = `0.7`
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- **Beetroot Soup**: 2 x raw beetroots,  1 x bowl, 1 x fired cooking pot.
+- **Beetroot Soup**: 2 x raw beetroots,  1 x fired bowl, 1 x fired cooking pot.
   - `foodValue` = `0.7`
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- **Pumpkin Soup**: 1 x pumpkin,  1 x bowl, 1 x fired cooking pot
+- **Pumpkin Soup**: 1 x pumpkin,  1 x fired bowl, 1 x fired cooking pot
   - `foodValue` = `0.8` (same as cooked pumpkin)
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
@@ -27,7 +27,8 @@ Adds more food options and culinary decorations to Sapiens.
 
 ### Up Next
 
-- Food Bowl expiry. Rotten food disappears, but is replaced with an empty bowl. Will also apply to medicines.
+- Food Bowl expiry. Rotten food disappears, but is replaced with an empty bowl. Same as medicines
+- Flatbread - Seeded: flatbread with sunflower seeds
 - Meat Stew: 1 x meat and 1 x bowl
   - Need to decide how to handle multiple portions of meat, and how many stews are produced
   - I.e. Cooked Chicken currently equals 1 portion; Alpaca = 3; Mammoth = 4

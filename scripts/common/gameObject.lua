@@ -37,25 +37,6 @@ function mod:onload(gameObject)
       },
     },
 
-    unfiredBowlGruel = {
-      name = locale:get("object_gruel"),
-      plural = locale:get("object_gruel_plural"),
-      modelName = "gruelBowlUnFired",
-      scale = 1.0,
-      hasPhysics = true,
-
-      resourceTypeIndex = resource.types.unfiredBowlGruel.index,
-
-      markerPositions = {
-        {
-          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
-        }
-      },
-      eatByProducts = {
-        gameObject.typeIndexMap.unfiredBowlDry,
-      },
-    },
-
     -- Beetroot Soup
     firedBowlBeetrootSoup = {
 
@@ -74,25 +55,6 @@ function mod:onload(gameObject)
       },
       eatByProducts = {
         gameObject.typeIndexMap.firedBowl,
-      },
-    },
-
-    unfiredBowlBeetrootSoup = {
-      name = locale:get("object_beetrootSoup"),
-      plural = locale:get("object_beetrootSoup_plural"),
-      modelName = "beetrootSoupBowlUnFired",
-      scale = 1.0,
-      hasPhysics = true,
-
-      resourceTypeIndex = resource.types.unfiredBowlBeetrootSoup.index,
-
-      markerPositions = {
-        {
-          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
-        }
-      },
-      eatByProducts = {
-        gameObject.typeIndexMap.unfiredBowlDry,
       },
     },
 
@@ -117,22 +79,17 @@ function mod:onload(gameObject)
       },
     },
 
-    unfiredBowlPumpkinSoup = {
-      name = locale:get("object_pumpkinSoup"),
-      plural = locale:get("object_pumpkinSoup_plural"),
-      modelName = "pumpkinSoupBowlUnFired",
+    firedBowlFoodBowlRotten = {
+      name = locale:get("object_firedBowlFoodBowlRotten"),
+      plural = locale:get("object_firedBowlFoodBowlRotten_plural"),
+      modelName = "firedBowlMedicineRotten",
       scale = 1.0,
       hasPhysics = true,
-
-      resourceTypeIndex = resource.types.unfiredBowlPumpkinSoup.index,
-
+      resourceTypeIndex = resource.types.firedBowlFoodBowlRotten.index,
       markerPositions = {
-        {
+        { 
           worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
         }
-      },
-      eatByProducts = {
-        gameObject.typeIndexMap.unfiredBowlDry,
       },
     },
 

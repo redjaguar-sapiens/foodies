@@ -14,12 +14,19 @@ function mod:onload(research)
     research.load = function(research_, gameObject, constructable, flora)
         super_load(research_, gameObject, constructable, flora)
 
+        -- Cooking Pot
+        research.types.potteryFiring.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredCookingPotDry.index] = constructable.types.firedCookingPot.index
+        table.insert(research.types.potteryFiring.resourceTypeIndexes, resource.types.firedCookingPot.index)
+        
         -- Gruel
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredUrnHulledWheat.index] = constructable.types.gruel.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.unfiredUrnHulledWheat.index)
 
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedUrnHulledWheat.index] = constructable.types.gruel.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedUrnHulledWheat.index)
+
+        research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedCookingPot.index] = constructable.types.gruel.index
+        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedCookingPot.index)
 
         -- Beetroot Soup
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.beetroot.index] = constructable.types.beetrootSoup.index
@@ -29,9 +36,7 @@ function mod:onload(research)
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.pumpkin.index] = constructable.types.pumpkinSoup.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.pumpkin.index)
 
-        -- Cooking Pot
-        research.types.potteryFiring.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredCookingPotDry.index] = constructable.types.firedCookingPot.index
-        table.insert(research.types.potteryFiring.resourceTypeIndexes, resource.types.firedCookingPot.index)
+        
 
         research:updateDerivedInfo(research.types.campfireCooking)
     end
