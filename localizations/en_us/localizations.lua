@@ -85,6 +85,9 @@ localizations.values = {
     craftable_firedCookingPot_plural = "Fired Cooking Pots",
     craftable_firedCookingPot_summary = "Used to cook soups and gruels on a campfire.",
     
+    tool_cookPot = "Cooking Tool",
+    tool_cookPot_plural = "Cooking Tools",
+    tool_cookPot_usage = "Cooking",
 }
 
 return localizations
