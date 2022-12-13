@@ -49,15 +49,7 @@ function mod:onload(craftable)
                   },
                 }
             },
-
-            outputObjectInfo = {
-                outputArraysByResourceObjectType = {
-                  [gameObject.types.firedCookingPot.index] = {
-                    gameObject.typeIndexMap.firedBowlBeetrootSoup,
-                    gameObject.typeIndexMap.firedCookingPot,
-                  },
-                }
-            },
+            
             buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
             inProgressBuildModel = "craftSimple",
 
@@ -117,7 +109,6 @@ function mod:onload(craftable)
             iconGameObjectType = gameObject.typeIndexMap.firedBowlBeetrootSoup,
             classification = constructable.classifications.craft.index,
             isFoodPreperation = true,
-            disabledUntilCraftableResearched = true,
 
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
@@ -188,7 +179,6 @@ function mod:onload(craftable)
             iconGameObjectType = gameObject.typeIndexMap.firedBowlPumpkinSoup,
             classification = constructable.classifications.craft.index,
             isFoodPreperation = true,
-            disabledUntilCraftableResearched = true,
 
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
