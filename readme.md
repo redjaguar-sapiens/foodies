@@ -4,26 +4,26 @@ Adds more food options and culinary decorations to Sapiens.
 
 ### Completed
 
-- **Gruel**: 1 x hulled wheat and 1 x bowl. 
+- **Cooking Pot**: for cooking food bowls (gruel/soups)
+  - Required to make soups/gruel. Returned/dropped after each item is completed.
+  - `Research` = `Pottery` + `Ceramics` (for firing)
+  - `Skills` = `Pottery`
+  - `Storage Group` = `Cooking Pots`
+- **Gruel**: 1 x hulled wheat,  1 x bowl, 1 x fired cooking pot
   - `foodValue` = `0.7`
   - `Research` = `Basic Cooking` + `Threshing` (for hulled wheat + bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- **Beetroot Soup**: 2 x raw beetroots and 1 x bowl. 
+- **Beetroot Soup**: 2 x raw beetroots,  1 x bowl, 1 x fired cooking pot.
   - `foodValue` = `0.7`
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- **Pumpkin Soup**: 1 x pumpkin and 1 x bowl
+- **Pumpkin Soup**: 1 x pumpkin,  1 x bowl, 1 x fired cooking pot
   - `foodValue` = `0.8` (same as cooked pumpkin)
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
-- **Cooking Pot**: for cooking food bowls (gruel/soup)
-  - Currently for decorative purposes, but will eventually be used for cooking Food Bowls
-  - `Research` = `Pottery` + `Ceramics` (for firing)
-  - `Skills` = `Pottery`
-  - `Storage Group` = `Cooking Pots`
 
 ### Up Next
 

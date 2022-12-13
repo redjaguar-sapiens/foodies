@@ -1,10 +1,10 @@
 Adds more food options and culinary decorations to Sapiens.
 
 Added:
-- Gruel (1 x hulled wheat + bowl)
-- Beetroot Soup (2 x beetroots + bowl)
-- Pumpkin Soup (1 x pumpkin + bowl)
-- Cooking Pot (decoration only for now)
+- Cooking Pot (used for making below recipes)
+- Gruel (1 x hulled wheat + bowl + fired cooking pot)
+- Beetroot Soup (2 x beetroots + bowl + fired cooking pot)
+- Pumpkin Soup (1 x pumpkin + bowl + fired cooking pot)
 
 Notes:
 - All food is made at the campfire. Will require Basic Cooking and Pottery research (plus Threshing for Gruel)
