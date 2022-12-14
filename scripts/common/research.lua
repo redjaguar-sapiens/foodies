@@ -16,30 +16,19 @@ function mod:onload(research)
 
         -- Cooking Pot
         
-        
         research.types.potteryFiring.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredCookingPotDry.index] = constructable.types.firedCookingPot.index
         table.insert(research.types.potteryFiring.resourceTypeIndexes, resource.types.firedCookingPot.index)
+
+        --[[research.types.campfireCooking.constructableTypeIndexArraysByBaseResourceTypeIndex[resource.types.firedCookingPot.index] = {constructable.types.gruel.index, constructable.types.beetrootSoup.index, constructable.types.pumpkinSoup.index}
+        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedCookingPot.index)--]]
         
-        --[[
         -- Gruel
-        research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.unfiredUrnHulledWheat.index] = constructable.types.gruel.index
-        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.unfiredUrnHulledWheat.index)
-
-        research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedUrnHulledWheat.index] = constructable.types.gruel.index
-        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedUrnHulledWheat.index)
-        --]]
-
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedCookingPot.index] = constructable.types.gruel.index
         table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedCookingPot.index)
 
-        -- Beetroot Soup
-        research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedCookingPot.index] = constructable.types.beetrootSoup.index
-        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedCookingPot.index)
-
-        --[[ Pumpkin Soup
-        table.remove(research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex, resource.types.pumpkin.index)
-        research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.pumpkin.index] = {constructable.types.campfireRoastedPumpkin.index, constructable.types.pumpkinSoup.index}
-        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.pumpkin.index)
+        --[[ Sunflower Flour
+        research.types.campfireCooking.constructableTypeIndexArraysByBaseResourceTypeIndex[resource.types.sunflowerSeed.index] = {constructable.types.breadDough.index, constructable.types.unfiredUrnSunflowerFlour.index}
+        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.sunflowerSeed.index)
         --]]
         
 
