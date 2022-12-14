@@ -22,6 +22,9 @@ function mod:onload(material)
 
 	mj:insertIndexed(material.types, mat("pumpkinSoup", vec3(0.48, 0.2, 0.05) * 1.1, 1.0))
 	mj:insertIndexed(material.types, mat("pumpkinSoupBits", vec3(0.70,0.28,0.05) * 1.1, 1.0))
+	
+	mj:insertIndexed(material.types, mat("meatStew", vec3(0.67,0.50,0.30), 1.0))
+	mj:insertIndexed(material.types, mat("meatStewBits", vec3(0.53,0.40,0.17), 1.0))
 end
 
 return mod

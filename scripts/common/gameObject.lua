@@ -79,6 +79,28 @@ function mod:onload(gameObject)
       },
     },
 
+    -- Pumpkin Soup
+    firedBowlMeatStewChicken = {
+
+      name = locale:get("object_meatStewChicken"),
+      plural = locale:get("object_meatStewChicken_plural"),
+      modelName = "meatStewBowlFired",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.firedBowlMeatStewChicken.index,
+
+      markerPositions = {
+        {
+          worldOffset = vec3(0.0, mj:mToP(0.3), 0.0)
+        }
+      },
+      eatByProducts = {
+        gameObject.typeIndexMap.firedBowl,
+      },
+    },
+
+    -- Rotten Food Bowl
     firedBowlFoodBowlRotten = {
       name = locale:get("object_firedBowlFoodBowlRotten"),
       plural = locale:get("object_firedBowlFoodBowlRotten_plural"),
@@ -92,7 +114,7 @@ function mod:onload(gameObject)
         }
       },
     },
-
+    -- Unfired Cooking Pot (Wet)
     unfiredCookingPotWet = {
       name = locale:get("object_unfiredCookingPotWet"),
       plural = locale:get("object_unfiredCookingPotWet_plural"),
@@ -109,6 +131,7 @@ function mod:onload(gameObject)
       }
     },
 
+    -- Unfured Cooking Pot (Dry)
     unfiredCookingPotDry = {
       name = locale:get("object_unfiredCookingPotDry"),
       plural = locale:get("object_unfiredCookingPotDry_plural"),
@@ -125,6 +148,7 @@ function mod:onload(gameObject)
       }
     },
 
+    -- Fired Cooking Pot
     firedCookingPot = {
       name = locale:get("object_firedCookingPot"),
       plural = locale:get("object_firedCookingPot_plural"),
@@ -140,6 +164,60 @@ function mod:onload(gameObject)
         }
       }
     },
+
+    --[[ Sunflower Flour
+
+    unfiredUrnSunflowerFlour = {
+      modelName = "unfiredUrnSunflowerFlour",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.unfiredUrnSunflowerFlour.index,
+
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+		  },
+    },
+    unfiredUrnSunflowerFlourRotten = {
+      modelName = "unfiredUrnSunflowerFlourRotten",
+      scale = 1.0,
+      hasPhysics = true,
+      resourceTypeIndex = resource.types.unfiredUrnSunflowerFlourRotten.index,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+    
+    firedUrnSunflowerFlour = {
+      modelName = "firedUrnSunflowerFlour",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.firedUrnSunflowerFlour.index,
+
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+    firedUrnSunflowerFlourRotten = {
+      modelName = "firedUrnSunflowerFlourRotten",
+      scale = 1.0,
+      hasPhysics = true,
+      resourceTypeIndex = resource.types.firedUrnSunflowerFlourRotten.index,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+
+    ]]
 
     })
 end

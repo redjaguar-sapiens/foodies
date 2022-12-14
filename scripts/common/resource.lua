@@ -40,6 +40,15 @@ function mod:onload(resource)
     })
 
     typeMaps:insert("resource", resource.types, {
+        key = "firedBowlMeatStewChicken",
+        name = locale:get("resource_meatStewChicken"),
+        plural = locale:get("resource_meatStewChicken_plural"),
+        foodValue = 1.0,
+        foodPortionCount = 1,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedBowlMeatStewChicken,
+    })
+
+    typeMaps:insert("resource", resource.types, {
         key = "firedBowlFoodBowlRotten",
         name = locale:get("resource_firedBowlFoodBowlRotten"),
         plural = locale:get("resource_firedBowlFoodBowlRotten_plural"),

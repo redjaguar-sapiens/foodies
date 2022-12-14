@@ -121,7 +121,7 @@ function mod:onload(craftable)
             buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
             inProgressBuildModel = "craftSimple",
 
-            disabledUntilAdditionalSkillTypeDiscovered = skill.types.pottery.index,
+            disabledUntilAdditionalSkillTypeDiscovered = skill.types.potteryFiring.index,
 
             skills = {
                 required = skill.types.campfireCooking.index,
@@ -191,7 +191,7 @@ function mod:onload(craftable)
             buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
             inProgressBuildModel = "craftSimple",
 
-            disabledUntilAdditionalSkillTypeDiscovered = skill.types.pottery.index,
+            disabledUntilAdditionalSkillTypeDiscovered = skill.types.potteryFiring.index,
 
             skills = {
                 required = skill.types.campfireCooking.index,
@@ -209,6 +209,73 @@ function mod:onload(craftable)
                 },
                 {
                     type = resource.types.pumpkin.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+                {
+                    type = resource.types.firedBowl.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 0.5,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+                
+            },
+
+            requiredCraftAreaGroups = {
+                craftAreaGroup.types.campfire.index,
+            },
+
+            temporaryToolObjectType = gameObject.typeIndexMap.stick,
+            temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
+            temporaryToolRotation = craftable.cookingStickRotation,
+        })
+
+        -- Meat Stew (Chicken)
+
+        craftable:addCraftable("meatStewChicken", {
+            name = locale:get("craftable_meatStewChicken"),
+            plural = locale:get("craftable_meatStewChicken_plural"),
+            summary = locale:get("craftable_meatStewChicken_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.firedBowlMeatStewChicken,
+            classification = constructable.classifications.craft.index,
+            isFoodPreperation = true,
+
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                  [gameObject.types.firedCookingPot.index] = {
+                    gameObject.typeIndexMap.firedBowlMeatStewChicken,
+                    gameObject.typeIndexMap.firedCookingPot,
+                  },
+                }
+            },
+            buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
+            inProgressBuildModel = "craftSimple",
+
+            disabledUntilAdditionalSkillTypeDiscovered = skill.types.potteryFiring.index,
+
+            skills = {
+                required = skill.types.campfireCooking.index,
+            },
+
+            requiredResources = {
+                {
+                    type = resource.types.firedCookingPot.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 0.5,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+                {
+                    type = resource.types.chickenMeat.index,
                     count = 1,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,

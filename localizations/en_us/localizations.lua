@@ -53,6 +53,21 @@ localizations.values = {
     craftable_pumpkinSoup_plural = "Pumpkin Soup",
     craftable_pumpkinSoup_summary = "Pumpkins blended into a heart-warming soup",
 
+    --- Meat Stew (Chicken)
+    research_unlock_cookMeatStewChicken = "Cook Meat Stew (Chicken)",
+
+    object_meatStewChicken = "Meat Stew (Chicken)",
+    object_meatStewChicken_plural = "Meat Stews (Chicken)",
+
+    resource_meatStewChicken = "Meat Stew (Chicken)",
+    resource_meatStewChicken_plural = "Meat Stews (Chicken)",
+
+    storage_meatStewChicken = "Meat Stew (Chicken)",
+
+    craftable_meatStewChicken = "Meat Stew (Chicken)",
+    craftable_meatStewChicken_plural = "Meat Stews (Chicken)",
+    craftable_meatStewChicken_summary = "A meaty chicken stew for growing sapiens",
+
     --- Rotten Food Bowls
     
     object_firedBowlFoodBowlRotten = "Rotten Food Bowl",

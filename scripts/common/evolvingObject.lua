@@ -43,6 +43,13 @@ function mod:onload(evolvingObject)
             categoryIndex = evolvingObject.categories.rot.index,
         }
 
+        --- Meat Stew (Chicken)
+        evolvingObject.evolutions[gameObject.types.firedBowlMeatStewChicken.index] = {
+            minTime = dayLength * 3.0,
+            toType = gameObject.types.firedBowlFoodBowlRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+
         --- Rotten Food Bowls
         evolvingObject.evolutions[gameObject.types.firedBowlFoodBowlRotten.index] = {
             minTime = dayLength,
