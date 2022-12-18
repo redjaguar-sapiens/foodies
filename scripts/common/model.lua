@@ -51,10 +51,7 @@ function mod:onload(model)
                 grain = "sunflowerFlourRotten",
             },
         }
-        model.remapModels.breadDough = {
-            breadDoughRotten = {
-                breadDough = "breadDoughRotten",
-            },
+        model.remapModels.sunflowerBreadDough = {
             sunflowerBreadDough = {
                 breadDough = "sunflowerBreadDough",
             },
@@ -62,16 +59,12 @@ function mod:onload(model)
                 breadDough = "sunflowerBreadDoughRotten",
             }
         }
-        model.remapModels.flatBread = {
-            flatbreadRotten = {
-                bread = "rottenBread",
-                darkBread = "darkRottenBread",
-            },
+        model.remapModels.sunflowerBread = {
             sunflowerBread = {
                 bread = "sunflowerBread",
             },
             sunflowerBreadRotten = {
-                breadDough = "sunflowerBreadRotten",
+                bread = "sunflowerBreadRotten",
             }
         }
 

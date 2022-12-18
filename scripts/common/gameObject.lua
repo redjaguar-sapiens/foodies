@@ -238,7 +238,7 @@ function mod:onload(gameObject)
     sunflowerBreadDough = {
       name = locale:get("object_sunflowerBreadDough"),
       plural = locale:get("object_sunflowerBreadDough_plural"),
-      modelName = "breadDough",
+      modelName = "sunflowerBreadDough",
       scale = 1.0,
       hasPhysics = true,
       
@@ -253,7 +253,7 @@ function mod:onload(gameObject)
     sunflowerBreadDoughRotten = {
       name = locale:get("object_sunflowerBreadDoughRotten"),
       plural = locale:get("object_sunflowerBreadDoughRotten"),
-      modelName = "breadDoughRotten",
+      modelName = "sunflowerBreadDough",
       scale = 1.0,
       hasPhysics = true,
       
@@ -271,7 +271,7 @@ function mod:onload(gameObject)
     sunflowerBread = {
       name = locale:get("object_sunflowerBread"),
       plural = locale:get("object_sunflowerBread_plural"),
-      modelName = "flatbread",
+      modelName = "sunflowerBread",
       scale = 1.0,
       hasPhysics = true,
       resourceTypeIndex = resource.types.sunflowerBread.index,
@@ -287,7 +287,7 @@ function mod:onload(gameObject)
     sunflowerBreadRotten = {
       name = locale:get("object_sunflowerBreadRotten"),
       plural = locale:get("object_sunflowerBreadRotten"),
-      modelName = "flatbreadRotten",
+      modelName = "sunflowerBread",
       scale = 1.0,
       hasPhysics = true,
       resourceTypeIndex = resource.types.sunflowerBreadRotten.index,
