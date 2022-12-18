@@ -40,10 +40,12 @@ function mod:onload(craftable)
                 outputArraysByResourceObjectType = {
                   [gameObject.types.unfiredUrnHulledWheat.index] = {
                       gameObject.typeIndexMap.firedBowlGruel,
+                      gameObject.typeIndexMap.firedBowlGruel,
                       gameObject.typeIndexMap.unfiredUrnDry,
                       gameObject.typeIndexMap.firedCookingPot,
                   },
                   [gameObject.types.firedUrnHulledWheat.index] = {
+                      gameObject.typeIndexMap.firedBowlGruel,
                       gameObject.typeIndexMap.firedBowlGruel,
                       gameObject.typeIndexMap.firedUrn,
                       gameObject.typeIndexMap.firedCookingPot,
@@ -73,7 +75,7 @@ function mod:onload(craftable)
                 -- Switch to fired bowls for all recipes (it's hot, duh)
                 {
                     type = resource.types.firedBowl.index,
-                    count = 1,
+                    count = 2,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
                         duration = 0.5,
@@ -115,6 +117,7 @@ function mod:onload(craftable)
                 outputArraysByResourceObjectType = {
                   [gameObject.types.firedCookingPot.index] = {
                     gameObject.typeIndexMap.firedBowlBeetrootSoup,
+                    gameObject.typeIndexMap.firedBowlBeetrootSoup,
                     gameObject.typeIndexMap.firedCookingPot,
                   },
                 }
@@ -149,7 +152,7 @@ function mod:onload(craftable)
                 },
                 {
                     type = resource.types.firedBowl.index,
-                    count = 1,
+                    count = 2,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
                         duration = 0.5,
@@ -185,6 +188,7 @@ function mod:onload(craftable)
                 outputArraysByResourceObjectType = {
                   [gameObject.types.firedCookingPot.index] = {
                     gameObject.typeIndexMap.firedBowlPumpkinSoup,
+                    gameObject.typeIndexMap.firedBowlPumpkinSoup,
                     gameObject.typeIndexMap.firedCookingPot,
                   },
                 }
@@ -219,7 +223,7 @@ function mod:onload(craftable)
                 },
                 {
                     type = resource.types.firedBowl.index,
-                    count = 1,
+                    count = 2,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
                         duration = 0.5,
@@ -251,6 +255,7 @@ function mod:onload(craftable)
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
                   [gameObject.types.firedCookingPot.index] = {
+                    gameObject.typeIndexMap.firedBowlMeatStewChicken,
                     gameObject.typeIndexMap.firedBowlMeatStewChicken,
                     gameObject.typeIndexMap.firedCookingPot,
                   },
@@ -286,7 +291,7 @@ function mod:onload(craftable)
                 },
                 {
                     type = resource.types.firedBowl.index,
-                    count = 1,
+                    count = 2,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
                         duration = 0.5,
