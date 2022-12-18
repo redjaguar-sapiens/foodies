@@ -405,7 +405,7 @@ function mod:onload(craftable)
             requiredResources = {
                 {
                     type = resource.types.sunflowerSeed.index,
-                    count = 4,
+                    count = 3,
                     afterAction = {
                         actionTypeIndex = action.types.inspect.index,
                         duration = 1.0,

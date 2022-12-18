@@ -29,11 +29,17 @@ Adds more food options and culinary decorations to Sapiens.
   - `Research` = `Basic cooking` + `Pottery` (for bowls)
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Food Bowls`
+- **Sunflower Bread**: 1 x sunflower bread dough
+  - `foodValue` = `1`
+  - `Research` = `Basic cooking` + `Baking`
+  - `Skills` = `Basic Cooking`
+  - `Storage Group` = `Breads`
+  - `Production` = Sunflower Seeds -> Sunflower Flour -> Sunflower Bread Dough
+  
 
 ### Up Next
 
-- Flatbread - Seeded: flatbread with sunflower seeds
-- Sunflower Bread/Flour: A common staple in Native American tribes pre-3000 BC
+- Recipes for bulk-producing certain foods. E.g. 5 x roasted beetroot, 5 x roasted meat, etc.
 - Cabbage: native crop used for stews
 - Oats: native crop that would eventually replace wheat for Gruel recipe, or at least be an alernative ingredient
 - Food bowls give a small warmth boost when eaten
