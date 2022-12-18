@@ -3,6 +3,12 @@
 
 local mjm = mjrequire "common/mjm"
 local vec3 = mjm.vec3
+local vec2 = mjm.vec2
+local normalize = mjm.normalize
+local vec3xMat3 = mjm.vec3xMat3
+local mat3Identity = mjm.mat3Identity
+local mat3Rotate = mjm.mat3Rotate
+local mat3Inverse = mjm.mat3Inverse
 
 local harvestable = mjrequire "common/harvestable"
 local resource = mjrequire "common/resource"
@@ -131,7 +137,7 @@ function mod:onload(gameObject)
       }
     },
 
-    -- Unfured Cooking Pot (Dry)
+    -- Unfired Cooking Pot (Dry)
     unfiredCookingPotDry = {
       name = locale:get("object_unfiredCookingPotDry"),
       plural = locale:get("object_unfiredCookingPotDry_plural"),
@@ -165,9 +171,11 @@ function mod:onload(gameObject)
       }
     },
 
-    --[[ Sunflower Flour
+    -- Sunflower Flour
 
     unfiredUrnSunflowerFlour = {
+      name = locale:get("object_unfiredUrnSunflowerFlour"),
+      plural = locale:get("object_unfiredUrnSunflowerFlour"),
       modelName = "unfiredUrnSunflowerFlour",
       scale = 1.0,
       hasPhysics = true,
@@ -181,9 +189,12 @@ function mod:onload(gameObject)
 		  },
     },
     unfiredUrnSunflowerFlourRotten = {
-      modelName = "unfiredUrnSunflowerFlourRotten",
+      name = locale:get("object_unfiredUrnSunflowerFlourRotten"),
+      plural = locale:get("object_unfiredUrnSunflowerFlourRotten"),
+      modelName = "unfiredUrnSunflowerFlour",
       scale = 1.0,
       hasPhysics = true,
+      
       resourceTypeIndex = resource.types.unfiredUrnSunflowerFlourRotten.index,
       markerPositions = {
         { 
@@ -193,6 +204,8 @@ function mod:onload(gameObject)
     },
     
     firedUrnSunflowerFlour = {
+      name = locale:get("object_firedUrnSunflowerFlour"),
+      plural = locale:get("object_firedUrnSunflowerFlour"),
       modelName = "firedUrnSunflowerFlour",
       scale = 1.0,
       hasPhysics = true,
@@ -206,9 +219,12 @@ function mod:onload(gameObject)
       },
     },
     firedUrnSunflowerFlourRotten = {
-      modelName = "firedUrnSunflowerFlourRotten",
+      name = locale:get("object_firedUrnSunflowerFlour"),
+      plural = locale:get("object_firedUrnSunflowerFlourRotten"),
+      modelName = "firedUrnSunflowerFlour",
       scale = 1.0,
       hasPhysics = true,
+
       resourceTypeIndex = resource.types.firedUrnSunflowerFlourRotten.index,
       markerPositions = {
         { 
@@ -217,9 +233,74 @@ function mod:onload(gameObject)
       },
     },
 
-    ]]
+    -- Sunflower Bread Dough
 
-    })
+    sunflowerBreadDough = {
+      name = locale:get("object_sunflowerBreadDough"),
+      plural = locale:get("object_sunflowerBreadDough_plural"),
+      modelName = "breadDough",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.sunflowerBreadDough.index,
+  
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+    sunflowerBreadDoughRotten = {
+      name = locale:get("object_sunflowerBreadDoughRotten"),
+      plural = locale:get("object_sunflowerBreadDoughRotten"),
+      modelName = "breadDoughRotten",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.sunflowerBreadDoughRotten.index,
+  
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+
+    --Sunflower Bread
+
+    sunflowerBread = {
+      name = locale:get("object_sunflowerBread"),
+      plural = locale:get("object_sunflowerBread_plural"),
+      modelName = "flatbread",
+      scale = 1.0,
+      hasPhysics = true,
+      resourceTypeIndex = resource.types.sunflowerBread.index,
+      objectViewRotationFunction = function(object) 
+        return mat3Rotate(mat3Identity, 0.1, vec3(1.0, 0.0, 0.0))
+      end,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.2), 0.0)
+        }
+      },
+    },
+    sunflowerBreadRotten = {
+      name = locale:get("object_sunflowerBreadRotten"),
+      plural = locale:get("object_sunflowerBreadRotten"),
+      modelName = "flatbreadRotten",
+      scale = 1.0,
+      hasPhysics = true,
+      resourceTypeIndex = resource.types.sunflowerBreadRotten.index,
+      objectViewRotationFunction = function(object) 
+        return mat3Rotate(mat3Identity, 0.1, vec3(1.0, 0.0, 0.0))
+      end,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.2), 0.0)
+        }
+      },
+    }
+  })
 end
 
 return mod

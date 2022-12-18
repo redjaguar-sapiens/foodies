@@ -24,13 +24,7 @@ function mod:onload(research)
         
         -- Gruel
         research.types.campfireCooking.constructableTypeIndexesByBaseResourceTypeIndex[resource.types.firedCookingPot.index] = constructable.types.gruel.index
-        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedCookingPot.index)
-
-        --[[ Sunflower Flour
-        research.types.campfireCooking.constructableTypeIndexArraysByBaseResourceTypeIndex[resource.types.sunflowerSeed.index] = {constructable.types.breadDough.index, constructable.types.unfiredUrnSunflowerFlour.index}
-        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.sunflowerSeed.index)
-        --]]
-        
+        table.insert(research.types.campfireCooking.resourceTypeIndexes, resource.types.firedCookingPot.index)        
 
         research:updateDerivedInfo(research.types.campfireCooking)
     end

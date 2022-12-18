@@ -9,6 +9,7 @@ local mat3Rotate = mjm.mat3Rotate
 --local mat3Inverse = mjm.mat3Inverse
 
 local constructable = mjrequire "common/constructable"
+local tool = mjrequire "common/tool"
 local action = mjrequire "common/action"
 local locale = mjrequire "common/locale"
 local resource = mjrequire "common/resource"
@@ -365,6 +366,150 @@ function mod:onload(craftable)
 
             requiredCraftAreaGroups = {
                 craftAreaGroup.types.kiln.index,
+            },
+    
+            temporaryToolObjectType = gameObject.typeIndexMap.stick,
+            temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
+            temporaryToolRotation = craftable.cookingStickRotation,
+        })
+
+        --- Sunflower Flour
+
+        craftable:addCraftable("unfiredUrnSunflowerFlour", {
+            name = locale:get("craftable_sunflowerFlour"),
+            plural = locale:get("craftable_sunflowerFlour_plural"),
+            summary = locale:get("craftable_sunflowerFlour_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.firedUrnSunflowerFlour,
+            classification = constructable.classifications.craft.index,
+            --placeBuildObjectsInFinalLocationsOnDropOff = true,
+            isFoodPreperation = true,
+
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                  [gameObject.types.unfiredUrnDry.index] = {
+                      gameObject.typeIndexMap.unfiredUrnSunflowerFlour,
+                  },
+                  [gameObject.types.firedUrn.index] = {
+                    gameObject.typeIndexMap.firedUrnSunflowerFlour,
+                },
+                }
+            },
+
+            buildSequence = craftable.grindingSequence,
+            inProgressBuildModel = "craftGrinding",
+
+            skills = {
+                required = skill.types.grinding.index,
+            },
+
+            requiredResources = {
+                {
+                    type = resource.types.sunflowerSeed.index,
+                    count = 4,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+                {
+                    group = resource.groups.container.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+            },
+            
+            requiredTools = {
+                tool.types.grinding.index,
+            },
+            dontPickUpRequiredTool = true,
+
+            temporaryToolObjectType = gameObject.typeIndexMap.rockSmall,
+            temporaryToolOffset = vec3(0.0,0.01,0.0),
+            temporaryToolRotation = mat3Identity,
+        })
+
+        craftable:addCraftable("sunflowerBreadDough", {
+            name = locale:get("craftable_sunflowerBreadDough"),
+            plural = locale:get("craftable_sunflowerBreadDough_plural"),
+            summary = locale:get("craftable_sunflowerBreadDough_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.sunflowerBreadDough,
+            classification = constructable.classifications.craft.index,
+            isFoodPreperation = true,
+    
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                    [gameObject.types.unfiredUrnSunflowerFlour.index] = {
+                        gameObject.typeIndexMap.sunflowerBreadDough,
+                        gameObject.typeIndexMap.unfiredUrnDry,
+                    },
+                    [gameObject.types.firedUrnSunflowerFlour.index] = {
+                        gameObject.typeIndexMap.sunflowerBreadDough,
+                        gameObject.typeIndexMap.firedUrn,
+                    },
+                }
+            },
+    
+            buildSequence = craftable.kneedingSequence,
+            inProgressBuildModel = "craftSimple",
+    
+            skills = {
+                required = skill.types.baking.index,
+            },
+            requiredResources = {
+                {
+                    group = resource.groups.urnSunflowerFlour.index,
+                    count = 1,
+                    afterAction = {
+                        actionTypeIndex = action.types.inspect.index,
+                        duration = 1.0,
+                        durationWithoutSkill = 15.0,
+                    }
+                },
+            },
+    
+        })
+
+        craftable:addCraftable("sunflowerBread", {
+            name = locale:get("craftable_sunflowerBread"),
+            plural = locale:get("craftable_sunflowerBread_plural"),
+            summary = locale:get("craftable_sunflowerBread_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.sunflowerBread,
+            classification = constructable.classifications.craft.index,
+            isFoodPreperation = true,
+    
+            outputObjectInfo = {
+                objectTypesArray = {
+                    gameObject.typeIndexMap.sunflowerBread,
+                    gameObject.typeIndexMap.sunflowerBread,
+                    gameObject.typeIndexMap.sunflowerBread,
+                    gameObject.typeIndexMap.sunflowerBread,
+                    gameObject.typeIndexMap.sunflowerBread,
+                }
+            },
+    
+            outputDisplayCount = 5,
+    
+            buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
+            inProgressBuildModel = "campfireRockCooking",
+    
+            skills = {
+                required = skill.types.baking.index,
+            },
+    
+            requiredResources = {
+                {
+                    type = resource.types.sunflowerBreadDough.index,
+                    count = 1,
+                },
+            },
+    
+            requiredCraftAreaGroups = {
+                craftAreaGroup.types.campfire.index,
             },
     
             temporaryToolObjectType = gameObject.typeIndexMap.stick,

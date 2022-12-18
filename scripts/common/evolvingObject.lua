@@ -57,6 +57,49 @@ function mod:onload(evolvingObject)
             categoryIndex = evolvingObject.categories.despawn.index,
         }
         
+        --- Sunflower Flour
+        evolvingObject.evolutions[gameObject.types.unfiredUrnSunflowerFlour.index] = {
+            minTime = dayLength * 4.0,
+            toType = gameObject.types.unfiredUrnSunflowerFlourRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.unfiredUrnSunflowerFlourRotten.index] = {
+            minTime = dayLength,
+            toType = gameObject.types.unfiredUrnDry.index,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
+        evolvingObject.evolutions[gameObject.types.firedUrnSunflowerFlour.index] = {
+            minTime = yearLength * 2.0,
+            toType = gameObject.types.firedUrnSunflowerFlourRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.firedUrnSunflowerFlourRotten.index] = {
+            minTime = dayLength,
+            toType = gameObject.types.firedUrn.index,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
+
+        --- Sunflower Bread Dough
+        evolvingObject.evolutions[gameObject.types.sunflowerBreadDough.index] = {
+            minTime = dayLength * 4.0,
+            toType = gameObject.types.sunflowerBreadDoughRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.sunflowerBreadDoughRotten.index] = {
+            minTime = dayLength,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
+
+        --- Sunflower Bread
+        evolvingObject.evolutions[gameObject.types.sunflowerBread.index] = {
+            minTime = yearLength * 0.5,
+            toType = gameObject.types.sunflowerBreadRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.sunflowerBreadRotten.index] = {
+            minTime = dayLength,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
     end
 end
 

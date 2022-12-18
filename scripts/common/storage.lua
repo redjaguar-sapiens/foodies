@@ -74,6 +74,105 @@ function mod:onload(storage)
         carryOffset = vec3(-0.02,0.1,0.07),
         carryRotation = mat3Rotate(mat3Identity, 1.2, vec3(0.0, 0.0, 1.0)),
     })
+    
+    typeMaps:insert("storage", storage.types,   {
+
+        key = "urn",
+        name = locale:get("storage_urn"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedUrn,
+        resources = {
+            resource.types.unfiredUrnWet.index,
+            resource.types.unfiredUrnDry.index,
+            resource.types.unfiredUrnHulledWheat.index,
+            resource.types.unfiredUrnHulledWheatRotten.index,
+            resource.types.unfiredUrnFlour.index,
+            resource.types.unfiredUrnFlourRotten.index,
+            
+            resource.types.firedUrn.index,
+            resource.types.firedUrnHulledWheat.index,
+            resource.types.firedUrnHulledWheatRotten.index,
+            resource.types.firedUrnFlour.index,
+            resource.types.firedUrnFlourRotten.index,
+
+            resource.types.unfiredUrnSunflowerFlour.index,
+            resource.types.unfiredUrnSunflowerFlourRotten.index,
+            
+            resource.types.firedUrnSunflowerFlour.index,
+            resource.types.firedUrnSunflowerFlourRotten.index,
+            
+        },
+        storageBox = {
+            size =  vec3(0.3, 0.86, 0.3),
+            rotationFunction = function(uniqueID, seed)
+                local randomValue = rng:valueForUniqueID(uniqueID, seed)
+                local rotation = mat3Rotate(mat3Identity, randomValue * 6.282, vec3(0.0,1.0,0.0))
+                return rotation
+            end,
+            dontRotateToFitBelowSurface = true,
+            placeObjectOffset = mj:mToP(vec3(0.0,0.4,0.0)),
+        },
+        maxCarryCount = 1,
+        maxCarryCountLimitedAbility = 1,
+		carryOffset = vec3(0.35,-0.01,-0.01),
+		--carryOffset = vec3(0.18,-0.1,0.1),
+        carryRotation = mat3Rotate(mat3Rotate(mat3Identity, math.pi * 0.4, vec3(0.0, 0.0, 1.0)), math.pi * 0.1, vec3(1.0, 0.0, 0.0)),
+        maxCarryCountForRunning = 0,
+    })
+
+    typeMaps:insert("storage", storage.types,   {
+
+        key = "breadDough",
+        name = locale:get("storage_breadDough"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.breadDough,
+        resources = {
+            resource.types.breadDough.index,
+            resource.types.breadDoughRotten.index,
+
+            resource.types.sunflowerBreadDough.index,
+            resource.types.sunflowerBreadDoughRotten.index,
+        },
+		storageBox = {
+			size =  vec3(0.3, 0.3, 0.3),
+			rotationFunction = function(uniqueID, seed)
+				local randomValue = rng:valueForUniqueID(uniqueID, seed)
+				local rotation = mat3Rotate(mat3Identity, randomValue * 0.2 - 0.1, vec3(0.0,1.0,0.0))
+				return rotation
+			end,
+		},
+		carryOffset = vec3(-0.02,0.1,0.07),
+        maxCarryCountLimitedAbility = 1,
+        maxCarryCountForRunning = 0,
+    })
+
+    typeMaps:insert("storage", storage.types,   {
+        
+        key = "flatbread",
+        name = locale:get("storage_flatbread"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.flatbread,
+        resources = {
+            resource.types.flatbread.index,
+            resource.types.flatbreadRotten.index,
+
+            resource.types.sunflowerBread.index,
+            resource.types.sunflowerBreadRotten.index,
+        },
+        storageBox = {
+            size =  vec3(0.25, 0.1, 0.25),
+            rotationFunction = function(uniqueID, seed)
+                local randomValue = rng:valueForUniqueID(uniqueID, seed)
+                local rotation = mat3Rotate(mat3Identity, randomValue * 0.6, vec3(1.0,0.0,0.0))
+                rotation = mat3Rotate(rotation, randomValue * 6.282, vec3(0.0,1.0,0.0))
+                return rotation
+            end,
+        },
+        maxCarryCount = 4,
+        maxCarryCountLimitedAbility = 2,
+        maxCarryCountForRunning = 1,
+        carryRotation = mat3Rotate(mat3Rotate(mat3Identity, 1.0, vec3(0.0, 0.0, 1.0)), -0.5, vec3(0.0, 1.0, 0.0)),
+        carryStackType = storage.stackTypes.vertical,
+		carryOffset = vec3(0.08,0.08,0.02),
+    })
+    
 
 end
 
