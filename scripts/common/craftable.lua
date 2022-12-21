@@ -21,6 +21,12 @@ local mod = {
     loadOrder = 1,
 }
 
+local afterActionTemplate = {
+    actionTypeIndex = action.types.inspect.index,
+    duration = 0.5,
+    durationWithoutSkill = 15.0,
+}
+
 function mod:onload(craftable)
     local super_load = craftable.load
     craftable.load = function(craftable_, gameObject, flora)
@@ -35,7 +41,8 @@ function mod:onload(craftable)
             classification = constructable.classifications.craft.index,
             isFoodPreperation = true,
             disabledUntilCraftableResearched = true,
-
+            
+            -- (2 x gruels produced)
             outputObjectInfo = {
                 outputArraysByResourceObjectType = {
                   [gameObject.types.unfiredUrnHulledWheat.index] = {
@@ -66,30 +73,17 @@ function mod:onload(craftable)
                 {
                     type = resource.types.firedCookingPot.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
-                -- Switch to fired bowls for all recipes (it's hot, duh)
                 {
                     type = resource.types.firedBowl.index,
                     count = 2,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     group = resource.groups.urnHulledWheat.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 
             },
@@ -135,29 +129,17 @@ function mod:onload(craftable)
                 {
                     type = resource.types.firedCookingPot.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     type = resource.types.beetroot.index,
                     count = 2,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     type = resource.types.firedBowl.index,
                     count = 2,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
             },
             
@@ -206,29 +188,17 @@ function mod:onload(craftable)
                 {
                     type = resource.types.firedCookingPot.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     type = resource.types.pumpkin.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     type = resource.types.firedBowl.index,
                     count = 2,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 
             },
@@ -274,29 +244,17 @@ function mod:onload(craftable)
                 {
                     type = resource.types.firedCookingPot.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     type = resource.types.chickenMeat.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     type = resource.types.firedBowl.index,
                     count = 2,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 0.5,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 
             },
@@ -332,11 +290,7 @@ function mod:onload(craftable)
                 {
                     type = resource.types.clay.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
             },
         })
@@ -361,11 +315,7 @@ function mod:onload(craftable)
                 {
                     type = resource.types.unfiredCookingPotDry.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
             },
 
@@ -411,20 +361,12 @@ function mod:onload(craftable)
                 {
                     type = resource.types.sunflowerSeed.index,
                     count = 3,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
                 {
                     group = resource.groups.container.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
             },
             
@@ -469,11 +411,7 @@ function mod:onload(craftable)
                 {
                     group = resource.groups.urnSunflowerFlour.index,
                     count = 1,
-                    afterAction = {
-                        actionTypeIndex = action.types.inspect.index,
-                        duration = 1.0,
-                        durationWithoutSkill = 15.0,
-                    }
+                    afterAction = afterActionTemplate
                 },
             },
     
