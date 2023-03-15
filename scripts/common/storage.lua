@@ -87,6 +87,12 @@ function mod:onload(storage)
             resource.types.unfiredUrnHulledWheatRotten.index,
             resource.types.unfiredUrnFlour.index,
             resource.types.unfiredUrnFlourRotten.index,
+
+            resource.types.unfiredUrnSunflowerFlour.index,
+            resource.types.unfiredUrnSunflowerFlourRotten.index,
+            
+            resource.types.unfiredUrnFlaxseedFlour.index,
+            resource.types.unfiredUrnFlaxseedFlourRotten.index,
             
             resource.types.firedUrn.index,
             resource.types.firedUrnHulledWheat.index,
@@ -94,11 +100,11 @@ function mod:onload(storage)
             resource.types.firedUrnFlour.index,
             resource.types.firedUrnFlourRotten.index,
 
-            resource.types.unfiredUrnSunflowerFlour.index,
-            resource.types.unfiredUrnSunflowerFlourRotten.index,
-            
             resource.types.firedUrnSunflowerFlour.index,
             resource.types.firedUrnSunflowerFlourRotten.index,
+
+            resource.types.firedUrnFlaxseedFlour.index,
+            resource.types.firedUrnFlaxseedFlourRotten.index,
             
         },
         storageBox = {
@@ -130,6 +136,9 @@ function mod:onload(storage)
 
             resource.types.sunflowerBreadDough.index,
             resource.types.sunflowerBreadDoughRotten.index,
+
+            resource.types.flaxseedBreadDough.index,
+            resource.types.flaxseedBreadDoughRotten.index,
         },
 		storageBox = {
 			size =  vec3(0.3, 0.3, 0.3),
@@ -155,6 +164,9 @@ function mod:onload(storage)
 
             resource.types.sunflowerBread.index,
             resource.types.sunflowerBreadRotten.index,
+
+            resource.types.flaxseedBread.index,
+            resource.types.flaxseedBreadRotten.index,
         },
         storageBox = {
             size =  vec3(0.25, 0.1, 0.25),

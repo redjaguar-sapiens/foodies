@@ -156,6 +156,30 @@ localizations.values = {
     craftable_flour = "Wheat Flour",
     craftable_flour_plural = "Wheat Flour",
 
+    --- Flaxseed flour
+
+    object_unfiredUrnFlaxseedFlour = "Flaxseed Flour (Unfired Urn)",
+    object_unfiredUrnFlaxseedFlour_plural = "Flaxseed Flour (Unfired Urn)",
+    object_unfiredUrnFlaxseedFlourRotten = "Moldy Flaxseed Flour (Unfired Urn)",
+    object_firedUrnFlaxseedFlour = "Flaxseed Flour (Fired Urn)",
+    object_firedUrnFlaxseedFlour_plural = "Flaxseed Flour (Fired Urn)",
+    object_firedUrnFlaxseedFlourRotten = "Moldy Flaxseed Flour (Fired Urn)",
+    
+    resource_unfiredUrnFlaxseedFlour = "Flaxseed Flour (Unfired Urn)",
+    resource_unfiredUrnFlaxseedFlour_plural = "Flaxseed Flour (Unfired Urn)",
+    resource_unfiredUrnFlaxseedFlourRotten = "Moldy Flaxseed Flour (Unfired Urn)",
+    resource_firedUrnFlaxseedFlour = "Flaxseed Flour (Fired Urn)",
+    resource_firedUrnFlaxseedFlour_plural = "Flaxseed Flour (Fired Urn)",
+    resource_firedUrnFlaxseedFlourRotten = "Moldy Flaxseed Flour (Fired Urn)",
+
+    resource_group_urnFlaxseedFlour = "Flaxseed Flower",
+    resource_group_urnFlaxseedFlour_plural = "Flaxseed Flower",
+
+
+    craftable_flaxseedFlour = "Flaxseed Flour",
+    craftable_flaxseedFlour_plural = "Flaxseed Flour",
+    craftable_flaxseedFlour_summary = "A keto-friendly flour made by grinding flax seeds",
+
     -- Sunflower Bread Dough
 
     object_sunflowerBreadDough = "Sunflower Bread Dough",
@@ -186,6 +210,20 @@ localizations.values = {
 
     storage_flatbread = "Breads",
 
+    -- Flaxseed Bread Dough
+
+    object_flaxseedBreadDough = "Flaxseed Bread Dough",
+    object_flaxseedBreadDough_plural = "Flaxseed Bread Dough",
+    object_flaxseedBreadDoughRotten = "Moldy Flaxseed Bread Dough",
+    
+    resource_flaxseedBreadDough = "Flaxseed Bread Dough",
+    resource_flaxseedBreadDough_plural = "Flaxseed Bread Dough",
+    resource_flaxseedBreadDoughRotten = "Moldy Flaxseed Bread Dough",
+
+    craftable_flaxseedBreadDough = "Flaxseed Bread Dough",
+    craftable_flaxseedBreadDough_plural = "Flaxseed Bread Dough",
+    craftable_flaxseedBreadDough_summary = "Can be baked into flaxseed bread",
+
     -- Sunflower Bread
 
     object_sunflowerBread = "Sunflower Bread",
@@ -199,6 +237,20 @@ localizations.values = {
     craftable_sunflowerBread = "Sunflower Bread",
     craftable_sunflowerBread_plural = "Sunflower Breads",
     craftable_sunflowerBread_summary = "Can be baked into sunflower bread",
+
+    -- Flaxseed Bread
+
+    object_flaxseedBread = "Flaxseed Bread",
+    object_flaxseedBread_plural = "Flaxseed Breads",
+    object_flaxseedBreadRotten = "Moldy Flaxseed Bread",
+    
+    resource_flaxseedBread = "Flaxseed Bread",
+    resource_flaxseedBread_plural = "Flaxseed Breads",
+    resource_flaxseedBreadRotten = "Moldy Flaxseed Bread",
+
+    craftable_flaxseedBread = "Flaxseed Bread",
+    craftable_flaxseedBread_plural = "Flaxseed Breads",
+    craftable_flaxseedBread_summary = "Can be baked into flaxseed bread",
 
 }
 

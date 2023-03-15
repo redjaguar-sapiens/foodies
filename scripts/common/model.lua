@@ -30,6 +30,12 @@ function mod:onload(model)
             unfiredUrnSunflowerFlourRotten = {
                 grain = "sunflowerFlourRotten",
             },
+            unfiredUrnFlaxseedFlour = {
+                grain = "flaxseedFlour",
+            },
+            unfiredUrnFlaxseedFlourRotten = {
+                grain = "flaxseedFlourRotten",
+            },
         }
         model.remapModels.firedUrnGrain = {
             firedUrnWheat = {
@@ -50,6 +56,12 @@ function mod:onload(model)
             firedUrnSunflowerFlourRotten = {
                 grain = "sunflowerFlourRotten",
             },
+            firedUrnFlaxseedFlour = {
+                grain = "flaxseedFlour",
+            },
+            firedUrnFlaxseedFlourRotten = {
+                grain = "flaxseedFlourRotten",
+            },
         }
         model.remapModels.sunflowerBreadDough = {
             sunflowerBreadDough = {
@@ -65,6 +77,22 @@ function mod:onload(model)
             },
             sunflowerBreadRotten = {
                 bread = "sunflowerBreadRotten",
+            }
+        }
+        model.remapModels.flaxseedBreadDough = {
+            flaxseedBreadDough = {
+                breadDough = "flaxseedBreadDough",
+            },
+            flaxseedBreadDoughRotten = {
+                breadDough = "flaxseedBreadDoughRotten",
+            }
+        }
+        model.remapModels.flaxseedBread = {
+            flaxseedBread = {
+                bread = "flaxseedBread",
+            },
+            flaxseedBreadRotten = {
+                bread = "flaxseedBreadRotten",
             }
         }
 

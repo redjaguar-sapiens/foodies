@@ -100,6 +100,50 @@ function mod:onload(evolvingObject)
             minTime = dayLength,
             categoryIndex = evolvingObject.categories.despawn.index,
         }
+
+        --- Flaxseed Flour
+        evolvingObject.evolutions[gameObject.types.unfiredUrnFlaxseedFlour.index] = {
+            minTime = dayLength * 4.0,
+            toType = gameObject.types.unfiredUrnFlaxseedFlourRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.unfiredUrnFlaxseedFlourRotten.index] = {
+            minTime = dayLength,
+            toType = gameObject.types.unfiredUrnDry.index,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
+        evolvingObject.evolutions[gameObject.types.firedUrnFlaxseedFlour.index] = {
+            minTime = yearLength * 2.0,
+            toType = gameObject.types.firedUrnFlaxseedFlourRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.firedUrnFlaxseedFlourRotten.index] = {
+            minTime = dayLength,
+            toType = gameObject.types.firedUrn.index,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
+
+        --- Flaxseed Bread Dough
+        evolvingObject.evolutions[gameObject.types.flaxseedBreadDough.index] = {
+            minTime = dayLength * 4.0,
+            toType = gameObject.types.flaxseedBreadDoughRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.flaxseedBreadDoughRotten.index] = {
+            minTime = dayLength,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
+
+        --- Flaxseed Bread
+        evolvingObject.evolutions[gameObject.types.flaxseedBread.index] = {
+            minTime = yearLength * 0.5,
+            toType = gameObject.types.flaxseedBreadRotten.index,
+            categoryIndex = evolvingObject.categories.rot.index,
+        }
+        evolvingObject.evolutions[gameObject.types.flaxseedBreadRotten.index] = {
+            minTime = dayLength,
+            categoryIndex = evolvingObject.categories.despawn.index,
+        }
     end
 end
 

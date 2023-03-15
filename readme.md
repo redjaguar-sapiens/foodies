@@ -35,20 +35,26 @@ Adds more food options and culinary decorations to Sapiens.
   - `Skills` = `Basic Cooking`
   - `Storage Group` = `Breads`
   - `Production` = Sunflower Seeds -> Sunflower Flour -> Sunflower Bread Dough
+- **Flaxseed Bread**: 1 x flaxseed bread dough
+  - `foodValue` = `1`
+  - `Research` = `Basic cooking` + `Baking`
+  - `Skills` = `Basic Cooking`
+  - `Storage Group` = `Breads`
+  - `Production` = Flax Seeds -> Flaxseed Flour -> Flaxseed Bread Dough
   
 
 ### Up Next
 
+- Alpaca and Mammoth meat stews
 - Recipes for bulk-producing certain foods. E.g. 5 x roasted beetroot, 5 x roasted meat, etc.
-- Cabbage: native crop used for stews
-- Oats: native crop that would eventually replace wheat for Gruel recipe, or at least be an alernative ingredient
 - Food bowls give a small warmth boost when eaten
 
 ### Potential
 
 - Dried meat: lasts much longer than cooked meat, but takes longer to make. Uses a Drying Rack
-- Chickens lay eggs, and can cook them into omelettes?
 - Mushrooms?
+- Cabbage: native crop used for stews
+- Oats: native crop that would eventually replace wheat for Gruel recipe, or at least be an alernative ingredient
 - Firewood from logs. Lasts longer than branches/logs
 - Rebalance expiry times for existing foods, e.g. flatbreads currently last 1 year
 

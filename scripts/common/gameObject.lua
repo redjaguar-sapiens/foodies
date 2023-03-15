@@ -299,6 +299,136 @@ function mod:onload(gameObject)
           worldOffset = vec3(0.0, mj:mToP(0.2), 0.0)
         }
       },
+    },
+
+    -- Flaxseed Flour
+
+    unfiredUrnFlaxseedFlour = {
+      name = locale:get("object_unfiredUrnFlaxseedFlour"),
+      plural = locale:get("object_unfiredUrnFlaxseedFlour"),
+      modelName = "unfiredUrnFlaxseedFlour",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.unfiredUrnFlaxseedFlour.index,
+
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+		  },
+    },
+    unfiredUrnFlaxseedFlourRotten = {
+      name = locale:get("object_unfiredUrnFlaxseedFlourRotten"),
+      plural = locale:get("object_unfiredUrnFlaxseedFlourRotten"),
+      modelName = "unfiredUrnFlaxseedFlour",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.unfiredUrnFlaxseedFlourRotten.index,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+    
+    firedUrnFlaxseedFlour = {
+      name = locale:get("object_firedUrnFlaxseedFlour"),
+      plural = locale:get("object_firedUrnFlaxseedFlour"),
+      modelName = "firedUrnFlaxseedFlour",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.firedUrnFlaxseedFlour.index,
+
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+    firedUrnFlaxseedFlourRotten = {
+      name = locale:get("object_firedUrnFlaxseedFlour"),
+      plural = locale:get("object_firedUrnFlaxseedFlourRotten"),
+      modelName = "firedUrnFlaxseedFlour",
+      scale = 1.0,
+      hasPhysics = true,
+
+      resourceTypeIndex = resource.types.firedUrnFlaxseedFlourRotten.index,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+
+    -- Flaxseed Bread Dough
+
+    flaxseedBreadDough = {
+      name = locale:get("object_flaxseedBreadDough"),
+      plural = locale:get("object_flaxseedBreadDough_plural"),
+      modelName = "flaxseedBreadDough",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.flaxseedBreadDough.index,
+  
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+    flaxseedBreadDoughRotten = {
+      name = locale:get("object_flaxseedBreadDoughRotten"),
+      plural = locale:get("object_flaxseedBreadDoughRotten"),
+      modelName = "flaxseedBreadDough",
+      scale = 1.0,
+      hasPhysics = true,
+      
+      resourceTypeIndex = resource.types.flaxseedBreadDoughRotten.index,
+  
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.6), 0.0)
+        }
+      },
+    },
+
+    --Flaxseed Bread
+
+    flaxseedBread = {
+      name = locale:get("object_flaxseedBread"),
+      plural = locale:get("object_flaxseedBread_plural"),
+      modelName = "flaxseedBread",
+      scale = 1.0,
+      hasPhysics = true,
+      resourceTypeIndex = resource.types.flaxseedBread.index,
+      objectViewRotationFunction = function(object) 
+        return mat3Rotate(mat3Identity, 0.1, vec3(1.0, 0.0, 0.0))
+      end,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.2), 0.0)
+        }
+      },
+    },
+    flaxseedBreadRotten = {
+      name = locale:get("object_flaxseedBreadRotten"),
+      plural = locale:get("object_flaxseedBreadRotten"),
+      modelName = "flaxseedBread",
+      scale = 1.0,
+      hasPhysics = true,
+      resourceTypeIndex = resource.types.flaxseedBreadRotten.index,
+      objectViewRotationFunction = function(object) 
+        return mat3Rotate(mat3Identity, 0.1, vec3(1.0, 0.0, 0.0))
+      end,
+      markerPositions = {
+        { 
+          worldOffset = vec3(0.0, mj:mToP(0.2), 0.0)
+        }
+      },
     }
   })
 end

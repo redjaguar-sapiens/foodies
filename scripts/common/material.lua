@@ -33,7 +33,16 @@ function mod:onload(material)
 	mj:insertIndexed(material.types, mat("sunflowerBreadDoughRotten", vec3(0.922,0.796,0.533), 1.0))
 
 	mj:insertIndexed(material.types, mat("sunflowerBread", vec3(0.69,0.60,0.42) * 1.0, 1.0))
-	mj:insertIndexed(material.types, mat("sunflowerBreadRotten", vec3(0.69,0.60,0.42), 1.0))
+	mj:insertIndexed(material.types, mat("sunflowerBreadRotten", vec3(0.36,0.29,0.15), 1.0))
+
+	mj:insertIndexed(material.types, mat("flaxseedFlour", vec3(0.85,0.71,0.43), 1.0))
+	mj:insertIndexed(material.types, mat("flaxseedFlourRotten", vec3(0.36,0.29,0.15), 1.0))
+
+	mj:insertIndexed(material.types, mat("flaxseedBreadDough", vec3(0.85,0.71,0.43), 1.0))
+	mj:insertIndexed(material.types, mat("flaxseedBreadDoughRotten", vec3(0.85,0.71,0.43), 1.0))
+
+	mj:insertIndexed(material.types, mat("flaxseedBread", vec3(0.85,0.71,0.43) * 1.0, 1.0))
+	mj:insertIndexed(material.types, mat("flaxseedBreadRotten", vec3(0.85,0.71,0.43), 1.0))
 end
 
 return mod

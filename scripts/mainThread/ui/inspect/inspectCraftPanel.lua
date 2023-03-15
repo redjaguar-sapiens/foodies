@@ -17,10 +17,13 @@ function mod:onload(inspectCraftPanel)
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.campfire], 2, constructable.types.pumpkinSoup.index)
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.campfire], 2, constructable.types.meatStewChicken.index)
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.campfire], 11, constructable.types.sunflowerBread.index)
+        table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.campfire], 12, constructable.types.flaxseedBread.index)
 
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.craftArea], 25, constructable.types.unfiredCookingPotWet.index)
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.craftArea], 32, constructable.types.unfiredUrnSunflowerFlour.index)
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.craftArea], 33, constructable.types.sunflowerBreadDough.index)
+        table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.craftArea], 34, constructable.types.unfiredUrnFlaxseedFlour.index)
+        table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.craftArea], 35, constructable.types.flaxseedBreadDough.index)
         
         table.insert(inspectCraftPanel.itemLists[gameObject.typeIndexMap.brickKiln], 5, constructable.types.firedCookingPot.index)
 

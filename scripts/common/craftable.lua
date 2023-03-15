@@ -460,6 +460,138 @@ function mod:onload(craftable)
             temporaryToolRotation = craftable.cookingStickRotation,
         })
 
+        --- Flaxseed Flour
+
+        craftable:addCraftable("unfiredUrnFlaxseedFlour", {
+            name = locale:get("craftable_flaxseedFlour"),
+            plural = locale:get("craftable_flaxseedFlour_plural"),
+            summary = locale:get("craftable_flaxseedFlour_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.firedUrnFlaxseedFlour,
+            classification = constructable.classifications.craft.index,
+            --placeBuildObjectsInFinalLocationsOnDropOff = true,
+            isFoodPreperation = true,
+
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                  [gameObject.types.unfiredUrnDry.index] = {
+                      gameObject.typeIndexMap.unfiredUrnFlaxseedFlour,
+                  },
+                  [gameObject.types.firedUrn.index] = {
+                    gameObject.typeIndexMap.firedUrnFlaxseedFlour,
+                },
+                }
+            },
+
+            buildSequence = craftable.grindingSequence,
+            inProgressBuildModel = "craftGrinding",
+
+            skills = {
+                required = skill.types.grinding.index,
+            },
+
+            requiredResources = {
+                {
+                    type = resource.types.flaxSeed.index,
+                    count = 3,
+                    afterAction = afterActionTemplate
+                },
+                {
+                    group = resource.groups.container.index,
+                    count = 1,
+                    afterAction = afterActionTemplate
+                },
+            },
+            
+            requiredTools = {
+                tool.types.grinding.index,
+            },
+            dontPickUpRequiredTool = true,
+
+            temporaryToolObjectType = gameObject.typeIndexMap.rockSmall,
+            temporaryToolOffset = vec3(0.0,0.01,0.0),
+            temporaryToolRotation = mat3Identity,
+        })
+
+        craftable:addCraftable("flaxseedBreadDough", {
+            name = locale:get("craftable_flaxseedBreadDough"),
+            plural = locale:get("craftable_flaxseedBreadDough_plural"),
+            summary = locale:get("craftable_flaxseedBreadDough_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.flaxseedBreadDough,
+            classification = constructable.classifications.craft.index,
+            isFoodPreperation = true,
+    
+            outputObjectInfo = {
+                outputArraysByResourceObjectType = {
+                    [gameObject.types.unfiredUrnFlaxseedFlour.index] = {
+                        gameObject.typeIndexMap.flaxseedBreadDough,
+                        gameObject.typeIndexMap.unfiredUrnDry,
+                    },
+                    [gameObject.types.firedUrnFlaxseedFlour.index] = {
+                        gameObject.typeIndexMap.flaxseedBreadDough,
+                        gameObject.typeIndexMap.firedUrn,
+                    },
+                }
+            },
+    
+            buildSequence = craftable.kneedingSequence,
+            inProgressBuildModel = "craftSimple",
+    
+            skills = {
+                required = skill.types.baking.index,
+            },
+            requiredResources = {
+                {
+                    group = resource.groups.urnFlaxseedFlour.index,
+                    count = 1,
+                    afterAction = afterActionTemplate
+                },
+            },
+    
+        })
+
+        craftable:addCraftable("flaxseedBread", {
+            name = locale:get("craftable_flaxseedBread"),
+            plural = locale:get("craftable_flaxseedBread_plural"),
+            summary = locale:get("craftable_flaxseedBread_summary"),
+            iconGameObjectType = gameObject.typeIndexMap.flaxseedBread,
+            classification = constructable.classifications.craft.index,
+            isFoodPreperation = true,
+    
+            outputObjectInfo = {
+                objectTypesArray = {
+                    gameObject.typeIndexMap.flaxseedBread,
+                    gameObject.typeIndexMap.flaxseedBread,
+                    gameObject.typeIndexMap.flaxseedBread,
+                    gameObject.typeIndexMap.flaxseedBread,
+                    gameObject.typeIndexMap.flaxseedBread,
+                }
+            },
+    
+            outputDisplayCount = 5,
+    
+            buildSequence = craftable:createStandardBuildSequence(actionSequence.types.fireStickCook.index, nil),
+            inProgressBuildModel = "campfireRockCooking",
+    
+            skills = {
+                required = skill.types.baking.index,
+            },
+    
+            requiredResources = {
+                {
+                    type = resource.types.flaxseedBreadDough.index,
+                    count = 1,
+                },
+            },
+    
+            requiredCraftAreaGroups = {
+                craftAreaGroup.types.campfire.index,
+            },
+    
+            temporaryToolObjectType = gameObject.typeIndexMap.stick,
+            temporaryToolOffset = vec3xMat3(vec3(-0.35,0.0,0.0), craftable.cookingStickRotationOffset),
+            temporaryToolRotation = craftable.cookingStickRotation,
+        })
+
     end
 end
 

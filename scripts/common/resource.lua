@@ -159,6 +159,87 @@ function mod:onload(resource)
         disallowsDecorationPlacing = true,
     })
 
+    --- Flaxseed Flour
+
+    typeMaps:insert("resource", resource.types, {
+        key = "unfiredUrnFlaxseedFlour",
+        name = locale:get("resource_unfiredUrnFlaxseedFlour"),
+        plural = locale:get("resource_unfiredUrnFlaxseedFlour"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredUrnFlaxseedFlour,
+    })
+
+    
+     typeMaps:insert("resource", resource.types, {
+        key = "unfiredUrnFlaxseedFlourRotten",
+        name = locale:get("resource_unfiredUrnFlaxseedFlourRotten"),
+        plural = locale:get("resource_unfiredUrnFlaxseedFlourRotten"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.unfiredUrnFlaxseedFlourRotten,
+        disallowsDecorationPlacing = true,
+    })
+
+     typeMaps:insert("resource", resource.types, {
+        key = "firedUrnFlaxseedFlour",
+        name = locale:get("resource_firedUrnFlaxseedFlour"),
+        plural = locale:get("resource_firedUrnFlaxseedFlour"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedUrnFlaxseedFlour,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "firedUrnFlaxseedFlourRotten",
+        name = locale:get("resource_firedUrnFlaxseedFlourRotten"),
+        plural = locale:get("resource_firedUrnFlaxseedFlourRotten"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedUrnFlaxseedFlourRotten,
+        disallowsDecorationPlacing = true,
+    })
+
+    -- Flaxseed Flour resource group
+    typeMaps:insert("resourceGroup", resource.groups, {
+        key = "urnFlaxseedFlour",
+        name = locale:get("resource_group_urnFlaxseedFlour"),
+        plural = locale:get("resource_group_urnFlaxseedFlour_plural"),
+        resourceTypes = {
+            resource.types.unfiredUrnFlaxseedFlour.index,
+            resource.types.firedUrnFlaxseedFlour.index,
+        },
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.firedUrnFlaxseedFlour,
+    })
+
+    -- Flaxseed Bread Dough
+
+    typeMaps:insert("resource", resource.types, {
+        key = "flaxseedBreadDough",
+        name = locale:get("resource_flaxseedBreadDough"),
+        plural = locale:get("resource_flaxseedBreadDough"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.flaxseedBreadDough,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "flaxseedBreadDoughRotten",
+        name = locale:get("resource_flaxseedBreadDoughRotten"),
+        plural = locale:get("resource_flaxseedBreadDoughRotten"),
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.flaxseedBreadDoughRotten,
+        disallowsDecorationPlacing = true,
+    })
+
+    -- Flaxseed Bread
+
+    typeMaps:insert("resource", resource.types, {
+        key = "flaxseedBread",
+        name = locale:get("resource_flaxseedBread"),
+        plural = locale:get("resource_flaxseedBread_plural"),
+        foodValue = 0.4,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.flaxseedBread,
+    })
+
+    typeMaps:insert("resource", resource.types, {
+        key = "flaxseedBreadRotten",
+        name = locale:get("resource_flaxseedBreadRotten"),
+        plural = locale:get("resource_flaxseedBreadRotten"),
+        foodValue = 0.2,
+        displayGameObjectTypeIndex = gameObjectTypeIndexMap.flaxseedBreadRotten,
+        disallowsDecorationPlacing = true,
+    })
+
 end
 
 return mod
