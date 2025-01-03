@@ -1,7 +1,6 @@
 Adds more food options, culinary decorations and bulk-cooking to Sapiens.
 
-Recipes:
-
+[h2]Recipes:[/h2]
 [list]
 [*] Pemmican
 [*] Dried Meat
@@ -16,5 +15,10 @@ Recipes:
 [*] Bulk-bake bread in the Kiln
 [*] Butcher chicken + alpaca carcasses with one order.
 [*] Cooking Pot (for soups/gruel)
+[/list]
 
 Full recipes, ingredients, item codes and the roadmap can be found in the discussion section.
+
+Note: I'll be integrating Hammerstone in V1, so please install it before then!
+
+[b]WARNING: If you want to add this mod to an existing world, please back your files up first![/b]

@@ -2,6 +2,11 @@
 
 Adds more food options and culinary decorations to Sapiens.
 
+- [Full objects and recipes list](https://steamcommunity.com/workshop/filedetails/discussion/2900979459/604144173313985088/)
+- [Roadmap](https://steamcommunity.com/workshop/filedetails/discussion/2900979459/3721693063166191338/)
+- [Feature requests](https://steamcommunity.com/workshop/filedetails/discussion/2900979459/3721693063166177259/)
+
+
 ### Completed
 
 - **Cooking Pot**: for cooking food bowls (gruel/soups)
