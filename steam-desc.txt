@@ -1,0 +1,20 @@
+Adds more food options, culinary decorations and bulk-cooking to Sapiens.
+
+Recipes:
+
+[list]
+[*] Pemmican
+[*] Dried Meat
+[*] Trail Mix
+[*] Gruel
+[*] Hearty Bone Broth
+[*] Beetroot Soup
+[*] Pumpkin Soup
+[*] Meat Stew
+[*] Flaxseed Bread
+[*] Sunflower Bread
+[*] Bulk-bake bread in the Kiln
+[*] Butcher chicken + alpaca carcasses with one order.
+[*] Cooking Pot (for soups/gruel)
+
+Full recipes, ingredients, item codes and the roadmap can be found in the discussion section.

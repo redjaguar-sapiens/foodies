@@ -1,0 +1,52 @@
+##################
+v0.8 - 01 Jan 2025
+##################
+
+We've got new and updated recipes, with a big focus on herbs & spices!
+
+New recipes:
+
+- Hearty Bone Broth: A warming broth of bones, beetroot, garlic and ginger. 
+Produces 6 bowls. Can be used as virus medicine, once virus medicine has been discovered. Will eventually give temporary immunity and a warmth boost in a future update.
+- Dried Meat: Air-dried Alpaca meat that'll stay edible for a long time. Mammoth meat version coming soon.
+- Pemmican: A preserved mixture of dried meat and berries that lasts a long time.
+- Trail Mix: A handful of seeds and dried fruits to keep you going. Flax seeds, sunflower seeds, raspberries, gooseberries and elderberries.
+
+Trail Mix and Biltong use a combined 'Snacks' storage group. Both will last 2 in-game years.
+
+Updated recipes:
+
+- Beetroot Soup: Now uses 2 x beetroots and 1 x garlic, and produces 4 bowls.
+- Pumpkin Soup: Now uses 1 x pumpkin and 1 x turmeric root, and produces 4 bowls.
+- Meat Stew: Now uses 2 x chicken meat and 1 x garlic, and produces 4 bowls. Soon, there will be alpaca and mammoth meat variations! (A bit harder to implement)
+- Flaxseed, Sunflower & Wheat Bread Dough: Now combined into one "Bread Dough" order in the crafting area. Similar to choosing stone types for tiles, bricks, small rocks etc.
+- Flaxseed Bread, Sunflower Bread & Flatbread: Same as Bread Dough, breads are now combined into one order in the campfire. They can also be baked in bulk in the kiln. Uses 2 x dough to produce 10 x breads. Approx. 25% faster than baking 2 x orders on the campfire.
+- Butcher Carcass: One combined order for butchering chickens and alpacas.
+
+
+Object IDs:
+- snackBiltong (Dried Meat)
+- snackTrailMix
+- pemmican
+- firedBowlGruel
+- firedBowlHeartyBoneBroth
+- firedBowlBeetrootSoup
+- firedBowlPumpkinSoup
+- firedBowlMeatStewChicken
+- unfiredUrnSunflowerFlour / firedUrnSunflowerFlour
+- sunflowerBreadDough
+- sunflowerBread
+- unfiredUrnFlaxseedFlour / firedUrnFlaxseedFlour
+- flaxseedBreadDough
+- flaxseedBread
+
+
+##################
+v1 - ?
+##################
+
+- Oven
+- Banana Bread (banana + bread dough + ginger)
+- Fruit Pie (pumpkin, apple, peach, raspberry, gooseberry, elderberry)
+- Beer brewing
+- Clay pots?
