@@ -23,30 +23,14 @@ Updated recipes:
 - Flaxseed Bread, Sunflower Bread & Flatbread: Same as Bread Dough, breads are now combined into one order in the campfire. They can also be baked in bulk in the kiln. Uses 2 x dough to produce 10 x breads. Approx. 25% faster than baking 2 x orders on the campfire.
 - Butcher Carcass: One combined order for butchering chickens and alpacas.
 
-
-Object IDs:
-- snackBiltong (Dried Meat)
-- snackTrailMix
-- pemmican
-- firedBowlGruel
-- firedBowlHeartyBoneBroth
-- firedBowlBeetrootSoup
-- firedBowlPumpkinSoup
-- firedBowlMeatStewChicken
-- unfiredUrnSunflowerFlour / firedUrnSunflowerFlour
-- sunflowerBreadDough
-- sunflowerBread
-- unfiredUrnFlaxseedFlour / firedUrnFlaxseedFlour
-- flaxseedBreadDough
-- flaxseedBread
-
+Full object and recipe list linked from the readme file.
 
 ##################
-v1 - ?
+Up Next
 ##################
 
 - Oven
 - Banana Bread (banana + bread dough + ginger)
 - Fruit Pie (pumpkin, apple, peach, raspberry, gooseberry, elderberry)
 - Beer brewing
-- Clay pots?
+- Clay pots for decoration, maybe storing beer as well?
